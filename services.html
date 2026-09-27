@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Services - What I Can Build | Muhammad Radeka Islamsyah</title>
+  <meta name="description" content="Layanan pembuatan website, database, dan pemrosesan data oleh Muhammad Radeka Islamsyah.">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Kartu Layanan Modern & Elastis */
+    .service-card-clean {
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 26px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform 0.45s cubic-bezier(0.34, 1.6, 0.64, 1), border-color 0.25s ease, box-shadow 0.25s ease !important;
+    }
+    .service-card-clean:hover {
+      transform: translateY(-8px) scale(1.015) !important;
+      border-color: var(--border-focus) !important;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45), 0 0 20px rgba(56, 189, 248, 0.1) !important;
+    }
+    .service-card-clean:active {
+      transform: scale(0.97) translateY(-2px) !important;
+      transition: transform 0.1s ease !important;
+    }
+
+    /* Ikon Box Interaktif */
+    .service-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-color);
+      font-size: 1.35rem;
+      margin-bottom: 18px;
+      transition: transform 0.4s cubic-bezier(0.34, 1.6, 0.64, 1), background 0.25s ease, border-color 0.25s ease;
+    }
+    .service-card-clean:hover .service-icon-box {
+      transform: translateY(-3px) scale(1.1);
+      background: rgba(56, 189, 248, 0.16);
+      border-color: var(--accent-color);
+      color: #ffffff;
+    }
+
+    /* Pill Tag Teknologi */
+    .service-pill {
+      font-family: var(--mono-font);
+      font-size: 11px;
+      padding: 4px 9px;
+      border-radius: 6px;
+      background: rgba(56, 189, 248, 0.06);
+      color: #7dd3fc;
+      border: 1px solid rgba(56, 189, 248, 0.18);
+      white-space: nowrap;
+      transition: transform 0.3s cubic-bezier(0.34, 1.6, 0.64, 1);
+    }
+    .service-pill:hover {
+      transform: translateY(-2px) scale(1.06);
+    }
+
+    /* Tombol Aksi Detail Layanan */
+    .service-detail-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--accent-color);
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      padding-top: 14px;
+      margin-top: 16px;
+      border-top: 1px solid var(--border-subtle);
+      transition: color 0.2s ease, padding 0.2s ease;
+    }
+    .service-detail-btn i {
+      font-size: 14px;
+      transition: transform 0.35s cubic-bezier(0.34, 1.6, 0.64, 1);
+    }
+    .service-detail-btn:hover {
+      color: #ffffff;
+      padding-left: 2px;
+    }
+    .service-detail-btn:hover i {
+      transform: translateX(6px);
+      color: var(--accent-color);
+    }
+    .service-detail-btn:active {
+      transform: scale(0.96);
+    }
+
+    /* Step Box Menda-Mendut */
+    .step-box {
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 24px 18px;
+      height: 100%;
+      cursor: pointer;
+      user-select: none;
+      transition: transform 0.45s cubic-bezier(0.34, 1.6, 0.64, 1), border-color 0.25s ease, box-shadow 0.25s ease !important;
+    }
+    .step-box:hover {
+      transform: translateY(-8px) scale(1.025) !important;
+      border-color: var(--border-focus) !important;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.45), 0 0 15px rgba(56, 189, 248, 0.15) !important;
+    }
+    .step-box:active {
+      transform: scale(0.94) translateY(0) !important;
+      transition: transform 0.08s ease !important;
+    }
+
+    /* Split CTA Banner */
+    .cta-banner-wrapper {
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 36px 40px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .cta-banner-wrapper:hover {
+      border-color: var(--border-focus);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(56, 189, 248, 0.08);
+    }
+    .status-pill {
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 8px #10b981;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body class="services-page">
+
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <h1 class="sitename">&lt;Radeka/&gt;</h1> 
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <div class="header-social-links">
+        <a href="#" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+        <a href="#" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" target="_blank" title="TikTok"><i class="bi bi-tiktok"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- SECTION 1: SERVICES LIST -->
+    <section id="services" class="services section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>What I Can Build</h2>
+        <p>Saya membantu membuat website, sistem, dan solusi digital sederhana sesuai kebutuhan, dengan fokus pada fungsi, struktur yang rapi, dan solusi yang praktis.</p>
+      </div>
+
+      <!-- Container Masuk Serempak Seirama -->
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4">
+          
+          <!-- 01 Web Development -->
+          <div class="col-lg-6">
+            <div class="service-card-clean">
+              <div class="service-icon-box"><i class="bi bi-browser-chrome"></i></div>
+              <small class="text-info font-monospace mb-1">01 &mdash; Web Development</small>
+              <h4 class="text-light fw-bold mb-2">Build websites that work.</h4>
+              <p class="text-secondary small mb-3">Membuat website dan aplikasi web sesuai kebutuhan, mulai dari website sederhana hingga sistem dengan database dan authentication.</p>
+              <div class="d-flex flex-wrap gap-1 mt-auto">
+                <span class="service-pill">PHP</span>
+                <span class="service-pill">HTML</span>
+                <span class="service-pill">CSS</span>
+                <span class="service-pill">JavaScript</span>
+                <span class="service-pill">MySQL</span>
+              </div>
+              <a href="service-details.html#service-01" class="service-detail-btn">
+                <span>Lihat Detail Layanan</span> <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 02 Backend Development -->
+          <div class="col-lg-6">
+            <div class="service-card-clean">
+              <div class="service-icon-box"><i class="bi bi-terminal-split"></i></div>
+              <small class="text-info font-monospace mb-1">02 &mdash; Backend Development</small>
+              <h4 class="text-light fw-bold mb-2">Logic behind the interface.</h4>
+              <p class="text-secondary small mb-3">Membangun logic backend, CRUD, authentication, session management, serta komunikasi antara aplikasi dan database.</p>
+              <div class="d-flex flex-wrap gap-1 mt-auto">
+                <span class="service-pill">PHP</span>
+                <span class="service-pill">MySQL</span>
+                <span class="service-pill">Laravel</span>
+              </div>
+              <a href="service-details.html#service-02" class="service-detail-btn">
+                <span>Lihat Detail Layanan</span> <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 03 Database Management -->
+          <div class="col-lg-6">
+            <div class="service-card-clean">
+              <div class="service-icon-box"><i class="bi bi-database-check"></i></div>
+              <small class="text-info font-monospace mb-1">03 &mdash; Database Management</small>
+              <h4 class="text-light fw-bold mb-2">Organize your data.</h4>
+              <p class="text-secondary small mb-3">Membuat dan mengelola database agar data tersimpan secara terstruktur, mudah dicari, dan mudah dikembangkan.</p>
+              <div class="d-flex flex-wrap gap-1 mt-auto">
+                <span class="service-pill">MySQL</span>
+                <span class="service-pill">SQL</span>
+                <span class="service-pill">Schema Normalization</span>
+              </div>
+              <a href="service-details.html#service-03" class="service-detail-btn">
+                <span>Lihat Detail Layanan</span> <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 04 Data Processing -->
+          <div class="col-lg-6">
+            <div class="service-card-clean">
+              <div class="service-icon-box"><i class="bi bi-file-earmark-spreadsheet"></i></div>
+              <small class="text-info font-monospace mb-1">04 &mdash; Data Processing</small>
+              <h4 class="text-light fw-bold mb-2">Turn large data into usable information.</h4>
+              <p class="text-secondary small mb-3">Membantu mengolah dan memproses data dalam jumlah besar, termasuk impor data dari Excel, filtering, searching, dan data cleaning.</p>
+              <div class="d-flex flex-wrap gap-1 mt-auto">
+                <span class="service-pill">Python</span>
+                <span class="service-pill">PHP</span>
+                <span class="service-pill">MySQL</span>
+                <span class="service-pill">Excel</span>
+              </div>
+              <a href="service-details.html#service-04" class="service-detail-btn">
+                <span>Lihat Detail Layanan</span> <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 05 API Integration -->
+          <div class="col-lg-6">
+            <div class="service-card-clean">
+              <div class="service-icon-box"><i class="bi bi-arrow-left-right"></i></div>
+              <small class="text-info font-monospace mb-1">05 &mdash; API Integration</small>
+              <h4 class="text-light fw-bold mb-2">Connect your system to other services.</h4>
+              <p class="text-secondary small mb-3">Mengintegrasikan API pihak ketiga ke dalam website atau aplikasi agar sistem dapat berkomunikasi dengan layanan eksternal (Product API, Top-Up, Payment API).</p>
+              <div class="d-flex flex-wrap gap-1 mt-auto">
+                <span class="service-pill">PHP</span>
+                <span class="service-pill">REST API</span>
+                <span class="service-pill">JSON</span>
+              </div>
+              <a href="service-details.html#service-05" class="service-detail-btn">
+                <span>Lihat Detail Layanan</span> <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 06 Python Automation -->
+          <div class="col-lg-6">
+            <div class="service-card-clean">
+              <div class="service-icon-box"><i class="bi bi-gear-wide-connected"></i></div>
+              <small class="text-info font-monospace mb-1">06 &mdash; Python Automation</small>
+              <h4 class="text-light fw-bold mb-2">Automate repetitive tasks.</h4>
+              <p class="text-secondary small mb-3">Membuat script atau tools sederhana menggunakan Python untuk membantu pekerjaan berulang, pemrosesan file, dan manipulasi data.</p>
+              <div class="d-flex flex-wrap gap-1 mt-auto">
+                <span class="service-pill">Python</span>
+                <span class="service-pill">Automation</span>
+              </div>
+              <a href="service-details.html#service-06" class="service-detail-btn">
+                <span>Lihat Detail Layanan</span> <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 07 Custom System Development -->
+          <div class="col-lg-6">
+            <div class="service-card-clean">
+              <div class="service-icon-box"><i class="bi bi-window-stack"></i></div>
+              <small class="text-info font-monospace mb-1">07 &mdash; Custom System Development</small>
+              <h4 class="text-light fw-bold mb-2">Build systems around your workflow.</h4>
+              <p class="text-secondary small mb-3">Membuat sistem web berdasarkan kebutuhan spesifik: absensi, evaluasi, pengaduan fasilitas, perpustakaan, atau sistem manajemen transaksi.</p>
+              <div class="d-flex flex-wrap gap-1 mt-auto">
+                <span class="service-pill">PHP</span>
+                <span class="service-pill">MySQL</span>
+                <span class="service-pill">JavaScript</span>
+              </div>
+              <a href="service-details.html#service-07" class="service-detail-btn">
+                <span>Lihat Detail Layanan</span> <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 08 Basic Electronics & Prototyping -->
+          <div class="col-lg-6">
+            <div class="service-card-clean" style="border-color: rgba(245, 158, 11, 0.25);">
+              <div class="service-icon-box" style="background: rgba(245, 158, 11, 0.08); border-color: rgba(245, 158, 11, 0.2); color: #f59e0b;">
+                <i class="bi bi-cpu"></i>
+              </div>
+              <small class="text-warning font-monospace mb-1">08 &mdash; Basic Electronics &amp; Prototyping</small>
+              <h4 class="text-light fw-bold mb-2">From digital ideas to simple hardware.</h4>
+              <p class="text-secondary small mb-3">Mengerjakan dan bereksperimen dengan project elektronik sederhana berdasarkan pengalaman membuat USB Step-Up Converter.</p>
+              <div class="d-flex flex-wrap gap-1 mt-auto">
+                <span class="service-pill" style="color: #f59e0b; border-color: rgba(245, 158, 11, 0.25); background: rgba(245, 158, 11, 0.06);">Voltage Conversion</span>
+                <span class="service-pill" style="color: #f59e0b; border-color: rgba(245, 158, 11, 0.25); background: rgba(245, 158, 11, 0.06);">Prototyping</span>
+                <span class="service-pill" style="color: #f59e0b; border-color: rgba(245, 158, 11, 0.25); background: rgba(245, 158, 11, 0.06);">Testing</span>
+              </div>
+              <a href="service-details.html#service-08" class="service-detail-btn" style="color: #f59e0b;">
+                <span>Lihat Detail Layanan</span> <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: HOW I WORK (STEP BOXES) -->
+    <section id="how-i-work" class="section pt-0">
+      <div class="container section-title pb-4" data-aos="fade-up">
+        <h2>From Idea to Working System</h2>
+        <p>Pendekatan bertahap yang saya gunakan dalam membangun setiap solusi perangkat lunak.</p>
+      </div>
+
+      <!-- Container Masuk Serempak Seirama -->
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-3 justify-content-center text-center">
+          
+          <div class="col-lg-3 col-md-6">
+            <div class="step-box">
+              <span class="badge text-bg-primary font-monospace mb-2 px-3 py-1">01</span>
+              <h5 class="text-light fw-bold mb-2">Understand</h5>
+              <p class="small text-secondary mb-0">Memahami kebutuhan dan masalah yang ingin diselesaikan.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="step-box">
+              <span class="badge text-bg-primary font-monospace mb-2 px-3 py-1">02</span>
+              <h5 class="text-light fw-bold mb-2">Build</h5>
+              <p class="small text-secondary mb-0">Membuat sistem berdasarkan kebutuhan tersebut.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="step-box">
+              <span class="badge text-bg-primary font-monospace mb-2 px-3 py-1">03</span>
+              <h5 class="text-light fw-bold mb-2">Test</h5>
+              <p class="small text-secondary mb-0">Menguji fitur dan mencari kemungkinan masalah.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="step-box">
+              <span class="badge text-bg-primary font-monospace mb-2 px-3 py-1">04</span>
+              <h5 class="text-light fw-bold mb-2">Improve</h5>
+              <p class="small text-secondary mb-0">Melakukan perbaikan dan improvement setelah sistem berjalan.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: FINAL CTA (SPLIT BANNER) -->
+    <section id="cta" class="section pt-0 pb-5">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="cta-banner-wrapper mx-auto" style="max-width: 960px;">
+          <div class="row align-items-center gy-4">
+            
+            <div class="col-lg-8 text-center text-lg-start">
+              <div class="status-pill px-3 py-1 rounded-pill mb-3">
+                <span class="status-dot"></span>
+                <span class="font-monospace small text-info">Ready to collaborate</span>
+              </div>
+              <h3 class="text-light fw-bold mb-2">Have an idea?</h3>
+              <p class="text-secondary mb-0" style="line-height: 1.6; max-width: 580px;">
+                Let's build something useful. Mulai dari sistem web fungsional, arsitektur database, hingga otomatisasi pengolahan data.
+              </p>
+            </div>
+
+            <div class="col-lg-4 text-center text-lg-end">
+              <a href="contact.html" class="btn btn-primary px-4 py-3 rounded-pill fw-semibold">
+                Start a Project &rarr;
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Muhammad Radeka Islamsyah</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="#" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+        <a href="#" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" target="_blank" title="TikTok"><i class="bi bi-tiktok"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

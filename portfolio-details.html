@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Project Details - Muhammad Radeka Islamsyah</title>
+  <meta name="description" content="Dokumentasi teknis spesifikasi proyek web, database, dan hardware oleh Muhammad Radeka Islamsyah.">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Sidebar List Navigasi Proyek */
+    .projects-nav-box {
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 18px;
+      margin-bottom: 24px;
+    }
+    .project-nav-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      color: #94a3b8;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      margin-bottom: 6px;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+    .project-nav-item i {
+      font-size: 16px;
+      color: var(--accent-color);
+    }
+    .project-nav-item:hover {
+      background: rgba(56, 189, 248, 0.08);
+      color: #ffffff;
+      border-color: rgba(56, 189, 248, 0.2);
+    }
+    .project-nav-item.active {
+      background: rgba(56, 189, 248, 0.14);
+      color: var(--accent-color);
+      border-color: var(--accent-color);
+      font-weight: 600;
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.15);
+    }
+
+    /* Container Detail Pane (Langsung Header Teknis) */
+    .project-detail-pane {
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+
+    /* Info Specs Table */
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      background: rgba(8, 12, 20, 0.55);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 18px;
+      margin: 22px 0;
+    }
+    .spec-item small {
+      display: block;
+      color: var(--muted-color);
+      font-size: 11px;
+      text-transform: uppercase;
+      font-family: var(--mono-font);
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+    .spec-item span {
+      color: #f8fafc;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .tech-pill {
+      font-family: var(--mono-font);
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(56, 189, 248, 0.06);
+      color: #7dd3fc;
+      border: 1px solid rgba(56, 189, 248, 0.18);
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .sidebar-widget {
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 24px;
+    }
+  </style>
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="#" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+        <a href="#" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" target="_blank" title="TikTok"><i class="bi bi-tiktok"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+    <section id="portfolio-details" class="portfolio-details section">
+      
+      <div class="container section-title pb-4" data-aos="fade-up">
+        <h2>Project Technical Documentation</h2>
+        <p>Spesifikasi teknis, arsitektur data, dan implementasi fitur dari sistem yang telah saya kembangkan.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+
+          <!-- Kolom Kiri: Navigasi Sidebar Proyek -->
+          <div class="col-lg-4" data-aos="fade-right">
+            
+            <div class="projects-nav-box">
+              <div class="small text-info font-monospace text-uppercase fw-semibold mb-3 px-2">Daftar Proyek</div>
+              
+              <div class="nav flex-column nav-pills" id="v-projects-tab" role="tablist">
+                <a class="project-nav-item active" id="tab-01-link" data-bs-toggle="pill" href="#tab-01" role="tab">
+                  <i class="bi bi-compass"></i> <span>01 &bull; Ridera (Main)</span>
+                </a>
+                <a class="project-nav-item" id="tab-02-link" data-bs-toggle="pill" href="#tab-02" role="tab">
+                  <i class="bi bi-file-earmark-spreadsheet"></i> <span>02 &bull; Large Excel System</span>
+                </a>
+                <a class="project-nav-item" id="tab-03-link" data-bs-toggle="pill" href="#tab-03" role="tab">
+                  <i class="bi bi-book"></i> <span>03 &bull; LibreTrack</span>
+                </a>
+                <a class="project-nav-item" id="tab-04-link" data-bs-toggle="pill" href="#tab-04" role="tab">
+                  <i class="bi bi-chat-square-dots"></i> <span>04 &bull; Pengaduan Siswa</span>
+                </a>
+                <a class="project-nav-item" id="tab-05-link" data-bs-toggle="pill" href="#tab-05" role="tab">
+                  <i class="bi bi-clock-history"></i> <span>05 &bull; Presensi PKL</span>
+                </a>
+                <a class="project-nav-item" id="tab-06-link" data-bs-toggle="pill" href="#tab-06" role="tab">
+                  <i class="bi bi-cpu" style="color:#f59e0b;"></i> <span>06 &bull; USB Step-Up</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Widget Kembali & Kontak -->
+            <div class="sidebar-widget">
+              <h5 class="text-light fw-bold mb-2">Tertarik Berkolaborasi?</h5>
+              <p class="small text-secondary mb-3">Butuh aplikasi berbasis alur serupa atau ingin berdiskusi seputar logika teknisnya?</p>
+              <div class="d-flex flex-column gap-2">
+                <a href="portfolio.html" class="btn btn-outline-info btn-sm rounded-pill fw-semibold py-2">
+                  &larr; Kembali ke Portfolio
+                </a>
+                <a href="contact.html" class="btn btn-primary btn-sm rounded-pill fw-semibold py-2">
+                  Hubungi Saya &rarr;
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Kolom Kanan: Detail Teknis Proyek (Tab Content Tanpa Foto) -->
+          <div class="col-lg-8" data-aos="fade-left">
+            <div class="tab-content" id="v-projects-tabContent">
+              
+              <!-- TAB 01: Ridera -->
+              <div class="tab-pane fade show active" id="tab-01" role="tabpanel">
+                <div class="project-detail-pane">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge bg-warning text-dark font-monospace fw-bold" style="font-size: 11px;">MAIN PROJECT</span>
+                    <span class="badge bg-info text-dark font-monospace" style="font-size: 11px;">Active Development</span>
+                  </div>
+                  <h3 class="text-light fw-bold mb-2">Ridera &mdash; Motorcycle Journey &amp; Fuel Tracker</h3>
+                  <p class="text-secondary small" style="line-height: 1.7;">
+                    Platform web personal yang dibangun untuk mendokumentasikan setiap rute berkendara, riwayat touring, dan menghitung efisiensi konsumsi bahan bakar kendaraan secara matematis dan terstruktur.
+                  </p>
+
+                  <div class="spec-grid">
+                    <div class="spec-item">
+                      <small>Kategori</small>
+                      <span>Web Platform &bull; Utility</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Peran</small>
+                      <span>Full-stack Development</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Database</small>
+                      <span>MySQL Relational</span>
+                    </div>
+                  </div>
+
+                  <h6 class="text-light fw-semibold mt-4 mb-2">Implementasi Fitur &amp; Logika:</h6>
+                  <ul class="list-unstyled text-secondary small mb-4">
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i><strong>Algoritma BBM:</strong> Kalkulasi otomatis rata-rata KM/Liter berdasarkan data pengisian tangki bensin dan selisih odometer.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i><strong>Log Rute &amp; Memori:</strong> Input titik awal, destinasi, kondisi cuaca, serta catatan kesan perjalanan.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i><strong>Sistem Upload Media:</strong> Kompresi dan validasi berkas foto dokumentasi sebelum disimpan ke direktori hosting.</li>
+                    <li class="mb-0"><i class="bi bi-check2 text-info me-2"></i><strong>Backend Ringan:</strong> Menggunakan arsitektur Native PHP prosedural yang dioptimalkan untuk respons server cepat.</li>
+                  </ul>
+
+                  <div class="pt-3 border-top border-secondary">
+                    <span class="small text-secondary d-block mb-2">Tech Stack:</span>
+                    <div class="d-flex flex-wrap gap-1">
+                      <span class="tech-pill">PHP Native</span>
+                      <span class="tech-pill">MySQL</span>
+                      <span class="tech-pill">Bootstrap 5</span>
+                      <span class="tech-pill">JavaScript</span>
+                      <span class="tech-pill">SQL Logic</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TAB 02: Large Excel System -->
+              <div class="tab-pane fade" id="tab-02" role="tabpanel">
+                <div class="project-detail-pane">
+                  <span class="badge bg-success font-monospace mb-2" style="font-size: 11px;">COMPLETED</span>
+                  <h3 class="text-light fw-bold mb-2">Large Excel Data Processing &amp; Optimization</h3>
+                  <p class="text-secondary small" style="line-height: 1.7;">
+                    Sistem pemrosesan berkas spreadsheet berskala besar yang dirancang khusus untuk menangani ribuan baris data tanpa membebani kapasitas RAM server hosting murah.
+                  </p>
+
+                  <div class="spec-grid">
+                    <div class="spec-item">
+                      <small>Kategori</small>
+                      <span>Data Processing &bull; Optimization</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Fokus Utama</small>
+                      <span>Memory Handling &amp; Indexing</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Target Data</small>
+                      <span>Spreadsheet &bull; SQL Records</span>
+                    </div>
+                  </div>
+
+                  <h6 class="text-light fw-semibold mt-4 mb-2">Implementasi Fitur &amp; Logika:</h6>
+                  <ul class="list-unstyled text-secondary small mb-4">
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i><strong>Batch / Chunk Processing:</strong> Pembacaan berkas data secara bertahap untuk mencegah error <code>memory_limit exceeded</code>.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i><strong>Data Sanitization:</strong> Pembersihan karakter kosong, normalisasi penanggalan, dan validasi tipe data sebelum import.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i><strong>SQL Optimization:</strong> Penerapan B-Tree Indexing pada kolom utama sehingga pencarian data tetap instan di bawah 1 detik.</li>
+                    <li class="mb-0"><i class="bi bi-check2 text-info me-2"></i><strong>Export Fleksibel:</strong> Kemampuan mengunduh kembali data hasil filter ke format laporan yang rapi.</li>
+                  </ul>
+
+                  <div class="pt-3 border-top border-secondary">
+                    <span class="small text-secondary d-block mb-2">Tech Stack:</span>
+                    <div class="d-flex flex-wrap gap-1">
+                      <span class="tech-pill">Python</span>
+                      <span class="tech-pill">PHP</span>
+                      <span class="tech-pill">MySQL</span>
+                      <span class="tech-pill">Spreadsheet Processing</span>
+                      <span class="tech-pill">Database Indexing</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TAB 03: LibreTrack -->
+              <div class="tab-pane fade" id="tab-03" role="tabpanel">
+                <div class="project-detail-pane">
+                  <span class="badge bg-success font-monospace mb-2" style="font-size: 11px;">COMPLETED</span>
+                  <h3 class="text-light fw-bold mb-2">LibreTrack &mdash; Sistem Perpustakaan Multi-Role</h3>
+                  <p class="text-secondary small" style="line-height: 1.7;">
+                    Aplikasi manajemen sirkulasi buku sekolah lengkap dengan pembagian hak akses pengguna, peminjaman terintegrasi, dan kalkulasi denda otomatis saat buku terlambat dikembalikan.
+                  </p>
+
+                  <div class="spec-grid">
+                    <div class="spec-item">
+                      <small>Kategori</small>
+                      <span>Information System &bull; Education</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Aktor Sistem</small>
+                      <span>Admin, Petugas, Siswa</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Arsitektur</small>
+                      <span>Relational Database (RDBMS)</span>
+                    </div>
+                  </div>
+
+                  <h6 class="text-light fw-semibold mt-4 mb-2">Implementasi Fitur &amp; Logika:</h6>
+                  <ul class="list-unstyled text-secondary small mb-4">
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i><strong>Multi-Role Session:</strong> Pembatasan hak akses berbasis level pengguna (Siswa hanya bisa melihat, Petugas mengelola sirkulasi).</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i><strong>Denda Keterlambatan Otomatis:</strong> Penghitungan selisih hari antara batas jatuh tempo dan tanggal pengembalian aktual.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i><strong>Integritas Relasi Data:</strong> Pemanfaatan relasi Primary &amp; Foreign Key untuk memastikan integritas data peminjaman.</li>
+                    <li class="mb-0"><i class="bi bi-check2 text-info me-2"></i><strong>Katalog Buku Interaktif:</strong> Pencarian judul buku cepat berdasarkan kategori, nomor ISBN, atau penulis.</li>
+                  </ul>
+
+                  <div class="pt-3 border-top border-secondary">
+                    <span class="small text-secondary d-block mb-2">Tech Stack:</span>
+                    <div class="d-flex flex-wrap gap-1">
+                      <span class="tech-pill">PHP</span>
+                      <span class="tech-pill">MySQL</span>
+                      <span class="tech-pill">Relational Schema</span>
+                      <span class="tech-pill">Session Guard</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TAB 04: Pengaduan Siswa -->
+              <div class="tab-pane fade" id="tab-04" role="tabpanel">
+                <div class="project-detail-pane">
+                  <span class="badge bg-success font-monospace mb-2" style="font-size: 11px;">COMPLETED</span>
+                  <h3 class="text-light fw-bold mb-2">Sistem Pengaduan &amp; Aspirasi Sarana Sekolah</h3>
+                  <p class="text-secondary small" style="line-height: 1.7;">
+                    Sistem ticketing aspirasi berbasis web yang memudahkan siswa melaporkan kerusakan fasilitas sekolah secara tertib, transparan, dan dapat dipantau perkembangannya oleh staf terkait.
+                  </p>
+
+                  <div class="spec-grid">
+                    <div class="spec-item">
+                      <small>Kategori</small>
+                      <span>Ticketing &bull; School Administration</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Sifat Laporan</small>
+                      <span>Transparan &bull; Berstatus</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Frontend</small>
+                      <span>Bootstrap 5 Responsive</span>
+                    </div>
+                  </div>
+
+                  <h6 class="text-light fw-semibold mt-4 mb-2">Implementasi Fitur &amp; Logika:</h6>
+                  <ul class="list-unstyled text-secondary small mb-4">
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i><strong>Alur Status Real-time:</strong> Laporan bergerak dari status <code>Menunggu</code> &rarr; <code>Sedang Diperbaiki</code> &rarr; <code>Selesai</code>.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i><strong>Formulir Bersih &amp; Aman:</strong> Sanitasi input teks bebas celah Cross-Site Scripting (XSS) dan injeksi SQL.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i><strong>Lampiran Bukti Foto:</strong> Upload berkas fisik kerusakan fasilitas untuk mempermudah pengecekan lapangan.</li>
+                    <li class="mb-0"><i class="bi bi-check2 text-info me-2"></i><strong>Panel Pengelola:</strong> Dashboard bagi pihak sarana untuk memberi catatan respon tindak lanjut.</li>
+                  </ul>
+
+                  <div class="pt-3 border-top border-secondary">
+                    <span class="small text-secondary d-block mb-2">Tech Stack:</span>
+                    <div class="d-flex flex-wrap gap-1">
+                      <span class="tech-pill">PHP Native</span>
+                      <span class="tech-pill">MySQL</span>
+                      <span class="tech-pill">Bootstrap 5</span>
+                      <span class="tech-pill">Form Validation</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TAB 05: Presensi PKL -->
+              <div class="tab-pane fade" id="tab-05" role="tabpanel">
+                <div class="project-detail-pane">
+                  <span class="badge bg-success font-monospace mb-2" style="font-size: 11px;">COMPLETED</span>
+                  <h3 class="text-light fw-bold mb-2">Sistem Presensi Mandiri Siswa PKL</h3>
+                  <p class="text-secondary small" style="line-height: 1.7;">
+                    Aplikasi absensi mandiri yang dirancang dengan validasi ketat jam operasional server untuk mencegah kecurangan pengisian waktu presensi siswa magang/industri.
+                  </p>
+
+                  <div class="spec-grid">
+                    <div class="spec-item">
+                      <small>Kategori</small>
+                      <span>Attendance &bull; Verification Logic</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Validasi</small>
+                      <span>Time-Window Locking</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Pelaporan</small>
+                      <span>Rekap Bulanan Otomatis</span>
+                    </div>
+                  </div>
+
+                  <h6 class="text-light fw-semibold mt-4 mb-2">Implementasi Fitur &amp; Logika:</h6>
+                  <ul class="list-unstyled text-secondary small mb-4">
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i><strong>Time-Locking Logic:</strong> Tombol absensi masuk dan pulang otomatis nonaktif jika waktu server berada di luar rentang jadwal kerja.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i><strong>Pengajuan Izin/Sakit:</strong> Validasi unggah berkas surat keterangan dokter atau surat permohonan izin resmi.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i><strong>Status Harian Unik:</strong> Mekanisme database yang mencegah duplikasi absensi di tanggal yang sama.</li>
+                    <li class="mb-0"><i class="bi bi-check2 text-info me-2"></i><strong>Ekspor Rekapitulasi:</strong> Penyajian ringkasan kehadiran total per siswa untuk penilaian akhir pembimbing.</li>
+                  </ul>
+
+                  <div class="pt-3 border-top border-secondary">
+                    <span class="small text-secondary d-block mb-2">Tech Stack:</span>
+                    <div class="d-flex flex-wrap gap-1">
+                      <span class="tech-pill">PHP</span>
+                      <span class="tech-pill">MySQL</span>
+                      <span class="tech-pill">Time-Validation Logic</span>
+                      <span class="tech-pill">CSS</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TAB 06: USB Step-Up Converter -->
+              <div class="tab-pane fade" id="tab-06" role="tabpanel">
+                <div class="project-detail-pane" style="border-color: rgba(245, 158, 11, 0.25);">
+                  <span class="badge font-monospace mb-2" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); font-size: 11px;">HARDWARE EXPERIMENT</span>
+                  <h3 class="text-light fw-bold mb-2">USB Step-Up Power Converter Module (5V &rarr; 9V/12V)</h3>
+                  <p class="text-secondary small" style="line-height: 1.7;">
+                    Eksperimen perakitan modul konversi voltase listrik DC-DC dari port USB 5V (seperti powerbank) menjadi tegangan keluaran stabil 9V dan 12V untuk kebutuhan suplai darurat router Wi-Fi atau perangkat lab.
+                  </p>
+
+                  <div class="spec-grid">
+                    <div class="spec-item">
+                      <small>Kategori</small>
+                      <span style="color:#fbbf24;">Hardware &bull; Electronics</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Tegangan Masuk</small>
+                      <span>5V DC (USB Standard)</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Tegangan Keluar</small>
+                      <span>9V &bull; 12V DC Regulated</span>
+                    </div>
+                  </div>
+
+                  <h6 class="text-warning fw-semibold mt-4 mb-2">Fokus &amp; Pengujian Teknis:</h6>
+                  <ul class="list-unstyled text-secondary small mb-4">
+                    <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i><strong>Sirkuit Konversi Daya:</strong> Pemanfaatan modul booster induktif untuk menaikkan level voltase dengan efisiensi tinggi.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i><strong>Pengujian &amp; Kalibrasi:</strong> Pengukuran keluaran tegangan menggunakan multimeter digital di bawah beban daya nyata.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i><strong>Use Case Darurat:</strong> Memungkinkan router internet rumah tetap menyala menggunakan powerbank saat listrik padam.</li>
+                    <li class="mb-0"><i class="bi bi-check2 text-warning me-2"></i><strong>Kombinasi Logika &amp; Fisik:</strong> Melatih pemahaman arus, hambatan, dan toleransi komponen di luar dunia software.</li>
+                  </ul>
+
+                  <div class="pt-3 border-top border-secondary">
+                    <span class="small text-secondary d-block mb-2">Components &amp; Tools:</span>
+                    <div class="d-flex flex-wrap gap-1">
+                      <span class="tech-pill" style="color:#fbbf24; border-color: rgba(245, 158, 11, 0.3); background: rgba(245, 158, 11, 0.08);">DC-DC Step-Up</span>
+                      <span class="tech-pill" style="color:#fbbf24; border-color: rgba(245, 158, 11, 0.3); background: rgba(245, 158, 11, 0.08);">USB Power Circuit</span>
+                      <span class="tech-pill" style="color:#fbbf24; border-color: rgba(245, 158, 11, 0.3); background: rgba(245, 158, 11, 0.08);">Digital Multimeter</span>
+                      <span class="tech-pill" style="color:#fbbf24; border-color: rgba(245, 158, 11, 0.3); background: rgba(245, 158, 11, 0.08);">Prototyping</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Muhammad Radeka Islamsyah</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="#" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+        <a href="#" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" target="_blank" title="TikTok"><i class="bi bi-tiktok"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Script Sinkronisasi Link Hash Tab -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      function activateTabFromHash() {
+        const hash = window.location.hash;
+        if (hash) {
+          const targetId = hash.replace("#project-", "tab-") + "-link";
+          const tabBtn = document.getElementById(targetId);
+          if (tabBtn) {
+            const tabTrigger = new bootstrap.Tab(tabBtn);
+            tabTrigger.show();
+            document.getElementById("portfolio-details").scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      }
+
+      activateTabFromHash();
+      window.addEventListener("hashchange", activateTabFromHash);
+    });
+  </script>
+</body>
+</html>

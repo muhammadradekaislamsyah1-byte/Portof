@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Service Details - Muhammad Radeka Islamsyah</title>
+  <meta name="description" content="Detail teknis dan ruang lingkup layanan pengembangan web, database, dan pemrosesan data oleh Muhammad Radeka Islamsyah.">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Sidebar List Navigasi Layanan */
+    .services-nav-box {
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 24px;
+    }
+    .service-nav-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 16px;
+      border-radius: 8px;
+      color: #94a3b8;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      margin-bottom: 5px;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+    .service-nav-item i {
+      font-size: 16px;
+      color: var(--accent-color);
+    }
+    .service-nav-item:hover {
+      background: rgba(56, 189, 248, 0.08);
+      color: #ffffff;
+      border-color: rgba(56, 189, 248, 0.2);
+    }
+    .service-nav-item.active {
+      background: rgba(56, 189, 248, 0.14);
+      color: var(--accent-color);
+      border-color: var(--accent-color);
+      font-weight: 600;
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.15);
+    }
+
+    /* Container Detail Pane (Tanpa Foto - Langsung Header Spesifikasi) */
+    .service-detail-pane {
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+
+    /* Info Specs Table */
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      background: rgba(8, 12, 20, 0.55);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 18px;
+      margin: 22px 0;
+    }
+    .spec-item small {
+      display: block;
+      color: var(--muted-color);
+      font-size: 11px;
+      text-transform: uppercase;
+      font-family: var(--mono-font);
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+    .spec-item span {
+      color: #f8fafc;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .tech-pill {
+      font-family: var(--mono-font);
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(56, 189, 248, 0.06);
+      color: #7dd3fc;
+      border: 1px solid rgba(56, 189, 248, 0.18);
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .sidebar-widget {
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 24px;
+    }
+  </style>
+</head>
+
+<body class="service-details-page">
+
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="#" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+        <a href="#" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" target="_blank" title="TikTok"><i class="bi bi-tiktok"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+    <section id="service-details" class="service-details section">
+      
+      <div class="container section-title pb-4" data-aos="fade-up">
+        <h2>Service Specifications</h2>
+        <p>Penjelasan mendalam mengenai alur kerja teknis, ruang lingkup pengerjaan, dan deliverables dari setiap layanan yang saya tawarkan.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+
+          <!-- Kolom Kiri: Navigasi 8 Tab Layanan -->
+          <div class="col-lg-4" data-aos="fade-right">
+            
+            <div class="services-nav-box">
+              <div class="small text-info font-monospace text-uppercase fw-semibold mb-3 px-2">Katalog Layanan</div>
+              
+              <div class="nav flex-column nav-pills" id="v-services-tab" role="tablist">
+                <a class="service-nav-item active" id="tab-service-01-link" data-bs-toggle="pill" href="#tab-service-01" role="tab">
+                  <i class="bi bi-browser-chrome"></i> <span>01 &bull; Web Development</span>
+                </a>
+                <a class="service-nav-item" id="tab-service-02-link" data-bs-toggle="pill" href="#tab-service-02" role="tab">
+                  <i class="bi bi-terminal-split"></i> <span>02 &bull; Backend Development</span>
+                </a>
+                <a class="service-nav-item" id="tab-service-03-link" data-bs-toggle="pill" href="#tab-service-03" role="tab">
+                  <i class="bi bi-database-check"></i> <span>03 &bull; Database Management</span>
+                </a>
+                <a class="service-nav-item" id="tab-service-04-link" data-bs-toggle="pill" href="#tab-service-04" role="tab">
+                  <i class="bi bi-file-earmark-spreadsheet"></i> <span>04 &bull; Data Processing</span>
+                </a>
+                <a class="service-nav-item" id="tab-service-05-link" data-bs-toggle="pill" href="#tab-service-05" role="tab">
+                  <i class="bi bi-arrow-left-right"></i> <span>05 &bull; API Integration</span>
+                </a>
+                <a class="service-nav-item" id="tab-service-06-link" data-bs-toggle="pill" href="#tab-service-06" role="tab">
+                  <i class="bi bi-gear-wide-connected"></i> <span>06 &bull; Python Automation</span>
+                </a>
+                <a class="service-nav-item" id="tab-service-07-link" data-bs-toggle="pill" href="#tab-service-07" role="tab">
+                  <i class="bi bi-window-stack"></i> <span>07 &bull; Custom System</span>
+                </a>
+                <a class="service-nav-item" id="tab-service-08-link" data-bs-toggle="pill" href="#tab-service-08" role="tab">
+                  <i class="bi bi-cpu" style="color:#f59e0b;"></i> <span>08 &bull; Basic Electronics</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Widget Kontak / Tanya Jawab -->
+            <div class="sidebar-widget">
+              <h5 class="text-light fw-bold mb-2">Konsultasi Kebutuhan?</h5>
+              <p class="small text-secondary mb-3">Diskusikan kebutuhan website, sistem database, atau script yang ingin Anda buat.</p>
+              <div class="d-flex flex-column gap-2">
+                <a href="services.html" class="btn btn-outline-info btn-sm rounded-pill fw-semibold py-2">
+                  &larr; Lihat Ringkasan Services
+                </a>
+                <a href="contact.html" class="btn btn-primary btn-sm rounded-pill fw-semibold py-2">
+                  Konsultasi Sekarang &rarr;
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Kolom Kanan: Detail Teknis Tiap Layanan (Tanpa Foto) -->
+          <div class="col-lg-8" data-aos="fade-left">
+            <div class="tab-content" id="v-services-tabContent">
+              
+              <!-- TAB 01: Web Development -->
+              <div class="tab-pane fade show active" id="tab-service-01" role="tabpanel">
+                <div class="service-detail-pane">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge bg-info text-dark font-monospace fw-bold" style="font-size: 11px;">SERVICE 01</span>
+                    <span class="badge bg-secondary font-monospace" style="font-size: 11px;">Full-Cycle Development</span>
+                  </div>
+                  <h3 class="text-light fw-bold mb-2">Web Development &mdash; Build Websites That Work</h3>
+                  <p class="text-secondary small" style="line-height: 1.7;">
+                    Pembuatan website fungsional mulai dari nol yang disesuaikan dengan kebutuhan pengguna. Menghubungkan antarmuka pengguna yang responsif dengan pemrosesan backend yang stabil dan penyimpanan data yang aman.
+                  </p>
+
+                  <div class="spec-grid">
+                    <div class="spec-item">
+                      <small>Fokus</small>
+                      <span>Struktur, Kecepatan, Fungsionalitas</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Lingkungan Server</small>
+                      <span>Shared Hosting / VPS Ringan</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Output</small>
+                      <span>Website Siap Digunakan</span>
+                    </div>
+                  </div>
+
+                  <h6 class="text-light fw-semibold mt-4 mb-2">Cakupan Pengerjaan:</h6>
+                  <ul class="list-unstyled text-secondary small mb-4">
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i>Penyusunan kode frontend berbasis HTML5, CSS modern, dan JavaScript yang ringan.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i>Desain antarmuka responsif yang nyaman dibuka di smartphone maupun laptop desktop.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i>Integrasi formulir interaktif langsung ke database dengan validasi data masukan.</li>
+                    <li class="mb-0"><i class="bi bi-check2 text-info me-2"></i>Struktur direktori rapi yang memudahkan perawatan atau penambahan fitur di masa depan.</li>
+                  </ul>
+
+                  <div class="pt-3 border-top border-secondary">
+                    <span class="small text-secondary d-block mb-2">Teknologi Terkait:</span>
+                    <div class="d-flex flex-wrap gap-1">
+                      <span class="tech-pill">PHP</span>
+                      <span class="tech-pill">HTML5</span>
+                      <span class="tech-pill">CSS3</span>
+                      <span class="tech-pill">JavaScript</span>
+                      <span class="tech-pill">Bootstrap</span>
+                      <span class="tech-pill">MySQL</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TAB 02: Backend Development -->
+              <div class="tab-pane fade" id="tab-service-02" role="tabpanel">
+                <div class="service-detail-pane">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge bg-info text-dark font-monospace fw-bold" style="font-size: 11px;">SERVICE 02</span>
+                    <span class="badge bg-secondary font-monospace" style="font-size: 11px;">Logic &amp; Data Pipeline</span>
+                  </div>
+                  <h3 class="text-light fw-bold mb-2">Backend Development &mdash; Logic Behind the Interface</h3>
+                  <p class="text-secondary small" style="line-height: 1.7;">
+                    Membangun alur logika di balik layar yang mengatur autentikasi akun, validasi data pengguna, hak akses bertingkat, serta operasi data terstruktur tanpa membebani pemakaian sumber daya server.
+                  </p>
+
+                  <div class="spec-grid">
+                    <div class="spec-item">
+                      <small>Arsitektur</small>
+                      <span>Procedural / Basic Modular</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Keamanan</small>
+                      <span>Session Guard &amp; Input Sanitation</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Karakter</small>
+                      <span>Efisien &bull; Bebas Bloatware</span>
+                    </div>
+                  </div>
+
+                  <h6 class="text-light fw-semibold mt-4 mb-2">Cakupan Pengerjaan:</h6>
+                  <ul class="list-unstyled text-secondary small mb-4">
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i>Pengembangan modul CRUD lengkap (Create, Read, Update, Delete) dengan logika bisnis spesifik.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i>Sistem autentikasi pengguna berbasis session untuk memisahkan hak akses multi-level.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i>Penyaringan dan sanitasi input form server-side untuk meminimalkan celah SQL Injection.</li>
+                    <li class="mb-0"><i class="bi bi-check2 text-info me-2"></i>Koneksi stabil dan aman antara logika aplikasi dengan database MySQL.</li>
+                  </ul>
+
+                  <div class="pt-3 border-top border-secondary">
+                    <span class="small text-secondary d-block mb-2">Teknologi Terkait:</span>
+                    <div class="d-flex flex-wrap gap-1">
+                      <span class="tech-pill">Native PHP</span>
+                      <span class="tech-pill">Session Management</span>
+                      <span class="tech-pill">MySQL</span>
+                      <span class="tech-pill">Form Validation</span>
+                      <span class="tech-pill">Basic Laravel</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TAB 03: Database Management -->
+              <div class="tab-pane fade" id="tab-service-03" role="tabpanel">
+                <div class="service-detail-pane">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge bg-info text-dark font-monospace fw-bold" style="font-size: 11px;">SERVICE 03</span>
+                    <span class="badge bg-secondary font-monospace" style="font-size: 11px;">RDBMS Architecture</span>
+                  </div>
+                  <h3 class="text-light fw-bold mb-2">Database Management &mdash; Organize Your Data</h3>
+                  <p class="text-secondary small" style="line-height: 1.7;">
+                    Perancangan skema database relasional yang terstruktur rapi. Mencegah duplikasi data, menjaga integritas relasi antar tabel, dan mengoptimalkan penulisan query SQL agar pencarian data tetap cepat.
+                  </p>
+
+                  <div class="spec-grid">
+                    <div class="spec-item">
+                      <small>Sistem RDBMS</small>
+                      <span>MySQL / MariaDB</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Desain</small>
+                      <span>Relasi Relational Schema</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Optimasi</small>
+                      <span>Indexing &amp; Normalized Tables</span>
+                    </div>
+                  </div>
+
+                  <h6 class="text-light fw-semibold mt-4 mb-2">Cakupan Pengerjaan:</h6>
+                  <ul class="list-unstyled text-secondary small mb-4">
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i>Normalisasi skema tabel database untuk menghindari redundansi data.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i>Penyusunan query kompleks memanfaatkan JOIN, GROUP BY, dan WHERE bersyarat.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i>Penerapan kunci relasi (Primary Key &amp; Foreign Key) agar integritas data terjamin.</li>
+                    <li class="mb-0"><i class="bi bi-check2 text-info me-2"></i>Pembuatan backup struktur skema dan data awal (database seeder / export dump).</li>
+                  </ul>
+
+                  <div class="pt-3 border-top border-secondary">
+                    <span class="small text-secondary d-block mb-2">Teknologi Terkait:</span>
+                    <div class="d-flex flex-wrap gap-1">
+                      <span class="tech-pill">MySQL</span>
+                      <span class="tech-pill">SQL Scripting</span>
+                      <span class="tech-pill">Database Schema</span>
+                      <span class="tech-pill">Query Optimization</span>
+                      <span class="tech-pill">phpMyAdmin</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TAB 04: Data Processing -->
+              <div class="tab-pane fade" id="tab-service-04" role="tabpanel">
+                <div class="service-detail-pane">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge bg-info text-dark font-monospace fw-bold" style="font-size: 11px;">SERVICE 04</span>
+                    <span class="badge bg-secondary font-monospace" style="font-size: 11px;">Batch Data Handling</span>
+                  </div>
+                  <h3 class="text-light fw-bold mb-2">Data Processing &mdash; Turn Large Data into Usable Information</h3>
+                  <p class="text-secondary small" style="line-height: 1.7;">
+                    Membantu mengolah, membersihkan, dan menata dataset besar dari berkas spreadsheet agar dapat dimasukkan ke database sistem atau disajikan kembali ke dalam tabel laporan yang terfilter secara akurat.
+                  </p>
+
+                  <div class="spec-grid">
+                    <div class="spec-item">
+                      <small>Format Input</small>
+                      <span>Excel (.xlsx), CSV, Raw Text</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Metode</small>
+                      <span>Chunk / Batch Parsing</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Hasil</small>
+                      <span>Clean Database / Export Report</span>
+                    </div>
+                  </div>
+
+                  <h6 class="text-light fw-semibold mt-4 mb-2">Cakupan Pengerjaan:</h6>
+                  <ul class="list-unstyled text-secondary small mb-4">
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i>Pembersihan format penanggalan, baris kosong, dan inkonsistensi teks pada dataset.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i>Mekanisme batch upload agar proses impor ribuan baris tidak membuat server freeze.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i>Pembuatan antarmuka visual tabel dengan filter multi-kolom dan pencarian instan.</li>
+                    <li class="mb-0"><i class="bi bi-check2 text-info me-2"></i>Fitur ekspor data terfilter kembali ke format Excel untuk kebutuhan laporan berkala.</li>
+                  </ul>
+
+                  <div class="pt-3 border-top border-secondary">
+                    <span class="small text-secondary d-block mb-2">Teknologi Terkait:</span>
+                    <div class="d-flex flex-wrap gap-1">
+                      <span class="tech-pill">Python Script</span>
+                      <span class="tech-pill">PHP Spreadsheet</span>
+                      <span class="tech-pill">MySQL</span>
+                      <span class="tech-pill">CSV Parsing</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TAB 05: API Integration -->
+              <div class="tab-pane fade" id="tab-service-05" role="tabpanel">
+                <div class="service-detail-pane">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge bg-info text-dark font-monospace fw-bold" style="font-size: 11px;">SERVICE 05</span>
+                    <span class="badge bg-secondary font-monospace" style="font-size: 11px;">External Services</span>
+                  </div>
+                  <h3 class="text-light fw-bold mb-2">API Integration &mdash; Connect Your System to Other Services</h3>
+                  <p class="text-secondary small" style="line-height: 1.7;">
+                    Menghubungkan aplikasi web dengan antarmuka pemrograman pihak ketiga (Third-Party REST API) agar aplikasi dapat menerima atau mengirim data secara otomatis tanpa input manual.
+                  </p>
+
+                  <div class="spec-grid">
+                    <div class="spec-item">
+                      <small>Protokol</small>
+                      <span>RESTful API &bull; JSON Data</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Transport</small>
+                      <span>cURL / Fetch / HTTP Client</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Keamanan</small>
+                      <span>Token / API Key Handling</span>
+                    </div>
+                  </div>
+
+                  <h6 class="text-light fw-semibold mt-4 mb-2">Cakupan Pengerjaan:</h6>
+                  <ul class="list-unstyled text-secondary small mb-4">
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i>Integrasi data produk atau katalog eksternal melalui endpoint REST API.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i>Parsing data respons JSON ke dalam variabel PHP dan antarmuka web.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i>Pengelolaan kunci API dan autentikasi token secara aman di sisi server.</li>
+                    <li class="mb-0"><i class="bi bi-check2 text-info me-2"></i>Penanganan error response (error fallback) jika server pihak ketiga sedang down.</li>
+                  </ul>
+
+                  <div class="pt-3 border-top border-secondary">
+                    <span class="small text-secondary d-block mb-2">Teknologi Terkait:</span>
+                    <div class="d-flex flex-wrap gap-1">
+                      <span class="tech-pill">REST API</span>
+                      <span class="tech-pill">JSON</span>
+                      <span class="tech-pill">cURL</span>
+                      <span class="tech-pill">PHP</span>
+                      <span class="tech-pill">Endpoint Testing</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TAB 06: Python Automation -->
+              <div class="tab-pane fade" id="tab-service-06" role="tabpanel">
+                <div class="service-detail-pane">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge bg-info text-dark font-monospace fw-bold" style="font-size: 11px;">SERVICE 06</span>
+                    <span class="badge bg-secondary font-monospace" style="font-size: 11px;">Task Scripting</span>
+                  </div>
+                  <h3 class="text-light fw-bold mb-2">Python Automation &mdash; Automate Repetitive Tasks</h3>
+                  <p class="text-secondary small" style="line-height: 1.7;">
+                    Membuat script sederhana menggunakan Python untuk mengotomatiskan pekerjaan berulang yang membosankan, seperti pengubahan nama ratusan berkas sekaligus, ekstraksi teks, atau penggabungan dokumen data.
+                  </p>
+
+                  <div class="spec-grid">
+                    <div class="spec-item">
+                      <small>Runtime</small>
+                      <span>Python 3.x CLI</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Sifat Program</small>
+                      <span>Scripting &bull; Standalone Tools</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Keuntungan</small>
+                      <span>Hemat Waktu &amp; Zero Human Error</span>
+                    </div>
+                  </div>
+
+                  <h6 class="text-light fw-semibold mt-4 mb-2">Cakupan Pengerjaan:</h6>
+                  <ul class="list-unstyled text-secondary small mb-4">
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i>Script otomatisasi pemrosesan dan konversi file berkas lokal.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i>Penyaringan dan pencarian pola teks menggunakan Regular Expressions (RegEx).</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i>Penyusunan log eksekusi agar proses otomatisasi dapat dipantau keberhasilannya.</li>
+                    <li class="mb-0"><i class="bi bi-check2 text-info me-2"></i>Tools CLI ringkas yang siap dijalankan langsung lewat terminal laptop.</li>
+                  </ul>
+
+                  <div class="pt-3 border-top border-secondary">
+                    <span class="small text-secondary d-block mb-2">Teknologi Terkait:</span>
+                    <div class="d-flex flex-wrap gap-1">
+                      <span class="tech-pill">Python</span>
+                      <span class="tech-pill">CLI Tools</span>
+                      <span class="tech-pill">File Manipulation</span>
+                      <span class="tech-pill">Scripting</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TAB 07: Custom System Development -->
+              <div class="tab-pane fade" id="tab-service-07" role="tabpanel">
+                <div class="service-detail-pane">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge bg-info text-dark font-monospace fw-bold" style="font-size: 11px;">SERVICE 07</span>
+                    <span class="badge bg-secondary font-monospace" style="font-size: 11px;">Workflow Tailored</span>
+                  </div>
+                  <h3 class="text-light fw-bold mb-2">Custom System &mdash; Build Systems Around Your Workflow</h3>
+                  <p class="text-secondary small" style="line-height: 1.7;">
+                    Mengembangkan aplikasi sistem berbasis web yang dirancang mengikuti alur kerja nyata lembaga atau organisasi: portal absensi berjadwal, sistem evaluasi/ujian, pengaduan fasilitas, maupun manajemen inventaris buku.
+                  </p>
+
+                  <div class="spec-grid">
+                    <div class="spec-item">
+                      <small>Basis Sistem</small>
+                      <span>Web Based (Akses via Browser)</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Penyesuaian</small>
+                      <span>100% Sesuai Aturan Klien</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Hak Akses</small>
+                      <span>Multi-Level Role Guard</span>
+                    </div>
+                  </div>
+
+                  <h6 class="text-light fw-semibold mt-4 mb-2">Cakupan Pengerjaan:</h6>
+                  <ul class="list-unstyled text-secondary small mb-4">
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i>Penerjemahan SOP atau aturan organisasi ke dalam modul kode dan database.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i>Pembangunan alur status pelacakan berkas/tiket laporan secara real-time.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i>Validasi waktu jam operasional sistem (seperti pembatasan jam absensi).</li>
+                    <li class="mb-0"><i class="bi bi-check2 text-info me-2"></i>Dashboard ringkasan statistik bagi administrator untuk memantau aktivitas.</li>
+                  </ul>
+
+                  <div class="pt-3 border-top border-secondary">
+                    <span class="small text-secondary d-block mb-2">Teknologi Terkait:</span>
+                    <div class="d-flex flex-wrap gap-1">
+                      <span class="tech-pill">PHP</span>
+                      <span class="tech-pill">MySQL</span>
+                      <span class="tech-pill">Business Logic</span>
+                      <span class="tech-pill">Bootstrap</span>
+                      <span class="tech-pill">JavaScript</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TAB 08: Basic Electronics & Prototyping -->
+              <div class="tab-pane fade" id="tab-service-08" role="tabpanel">
+                <div class="service-detail-pane" style="border-color: rgba(245, 158, 11, 0.25);">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge font-monospace fw-bold" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); font-size: 11px;">SERVICE 08</span>
+                    <span class="badge bg-secondary font-monospace" style="font-size: 11px;">Hardware Experiment</span>
+                  </div>
+                  <h3 class="text-light fw-bold mb-2">Basic Electronics &mdash; From Digital Ideas to Simple Hardware</h3>
+                  <p class="text-secondary small" style="line-height: 1.7;">
+                    Eksperimen dan perakitan modul elektronika daya sederhana, pengujian tegangan listrik menggunakan multimeter, dan integrasi sirkuit daya untuk kebutuhan darurat perangkat router atau perangkat portabel lainnya.
+                  </p>
+
+                  <div class="spec-grid">
+                    <div class="spec-item">
+                      <small>Kategori</small>
+                      <span style="color:#fbbf24;">Hardware &bull; Prototyping</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Fokus Daya</small>
+                      <span>DC-DC Voltage Conversion</span>
+                    </div>
+                    <div class="spec-item">
+                      <small>Pengujian</small>
+                      <span>Multimeter &amp; Load Calibration</span>
+                    </div>
+                  </div>
+
+                  <h6 class="text-warning fw-semibold mt-4 mb-2">Cakupan Pengerjaan:</h6>
+                  <ul class="list-unstyled text-secondary small mb-4">
+                    <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i>Perakitan modul penaik tegangan (DC Step-Up Boost Converter) dari suplai USB 5V ke 9V/12V.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i>Pengukuran kestabilan tegangan output dan arus beban menggunakan multimeter digital.</li>
+                    <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i>Solusi penyediaan daya cadangan untuk router internet rumah dari powerbank saat pemadaman listrik.</li>
+                    <li class="mb-0"><i class="bi bi-check2 text-warning me-2"></i>Dokumentasi hasil pengukuran parameter kelistrikan dan batas toleransi rangkaian.</li>
+                  </ul>
+
+                  <div class="pt-3 border-top border-secondary">
+                    <span class="small text-secondary d-block mb-2">Komponen &amp; Alat:</span>
+                    <div class="d-flex flex-wrap gap-1">
+                      <span class="tech-pill" style="color: #fbbf24; border-color: rgba(245, 158, 11, 0.3); background: rgba(245, 158, 11, 0.08);">DC-DC Converter</span>
+                      <span class="tech-pill" style="color: #fbbf24; border-color: rgba(245, 158, 11, 0.3); background: rgba(245, 158, 11, 0.08);">USB Power Supply</span>
+                      <span class="tech-pill" style="color: #fbbf24; border-color: rgba(245, 158, 11, 0.3); background: rgba(245, 158, 11, 0.08);">Digital Multimeter</span>
+                      <span class="tech-pill" style="color: #fbbf24; border-color: rgba(245, 158, 11, 0.3); background: rgba(245, 158, 11, 0.08);">Hardware Testing</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Muhammad Radeka Islamsyah</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="#" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+        <a href="#" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" target="_blank" title="TikTok"><i class="bi bi-tiktok"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Script Sinkronisasi Link Hash Tab Layanan -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      function activateServiceTab() {
+        const hash = window.location.hash;
+        if (hash) {
+          // Mendukung link seperti service-details.html#service-01 s/d #service-08
+          const targetLinkId = "tab-" + hash.substring(1) + "-link";
+          const tabBtn = document.getElementById(targetLinkId);
+          if (tabBtn) {
+            const tabTrigger = new bootstrap.Tab(tabBtn);
+            tabTrigger.show();
+            document.getElementById("service-details").scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      }
+
+      activateServiceTab();
+      window.addEventListener("hashchange", activateServiceTab);
+    });
+  </script>
+</body>
+</html>

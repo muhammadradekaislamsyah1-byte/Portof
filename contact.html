@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Contact - Muhammad Radeka Islamsyah</title>
+  <meta name="description" content="Hubungi Muhammad Radeka Islamsyah untuk diskusi project web, database, sistem informasi, atau kolaborasi teknologi.">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Kartu Kontak Cepat (Elastis & Bersih) */
+    .contact-card-box {
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 26px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.25s ease, box-shadow 0.25s ease !important;
+    }
+    .contact-card-box:hover {
+      transform: translateY(-8px) scale(1.015) !important;
+      border-color: var(--border-focus) !important;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45), 0 0 20px rgba(56, 189, 248, 0.1) !important;
+    }
+    .contact-card-box:active {
+      transform: scale(0.97) translateY(-2px) !important;
+      transition: transform 0.1s ease !important;
+    }
+
+    .icon-badge {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .contact-card-box:hover .icon-badge {
+      transform: translateY(-3px) scale(1.1);
+    }
+    .contact-card-box:hover .icon-badge i {
+      display: inline-block;
+      transform: rotate(360deg) scale(1.2);
+      transition: transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    /* Social Pill */
+    .social-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      border-radius: 50px;
+      background: rgba(14, 21, 38, 0.6);
+      border: 1px solid var(--border-subtle);
+      color: var(--nav-color);
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s ease, border-color 0.2s ease;
+    }
+    .social-pill:hover {
+      background: var(--accent-subtle);
+      border-color: var(--accent-color);
+      color: #fff;
+      transform: translateY(-3px) scale(1.05);
+    }
+    .social-pill:active {
+      transform: scale(0.92);
+    }
+
+    /* Form Container & Input Styling */
+    .form-wrapper {
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .form-control-custom {
+      background: rgba(8, 12, 20, 0.6);
+      border: 1px solid var(--border-subtle);
+      color: var(--heading-color);
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 14px;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .form-control-custom:focus {
+      background: rgba(8, 12, 20, 0.85);
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+      color: #fff;
+      outline: none;
+    }
+    .form-control-custom::placeholder {
+      color: var(--muted-color);
+    }
+
+    /* Modern Split CTA Banner */
+    .cta-banner-wrapper {
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 36px 40px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .cta-banner-wrapper:hover {
+      border-color: var(--border-focus);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(56, 189, 248, 0.08);
+    }
+    .status-pill {
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 8px #10b981;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body class="contact-page">
+
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <!-- Logo teks dihapus agar bersih -->
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <!-- Header Social Links -->
+      <div class="header-social-links">
+        <a href="#" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+        <a href="#" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" target="_blank" title="TikTok"><i class="bi bi-tiktok"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+    <section id="contact" class="contact section">
+      
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Let’s Build Something Together</h2>
+        <p>Punya ide project, ingin berdiskusi seputar logika backend, arsitektur database, atau sekadar bertukar pikiran tentang teknologi? Hubungi saya langsung.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        
+        <!-- Direct Contact Cards Row -->
+        <div class="row g-4 mb-5">
+          
+          <!-- Card WhatsApp -->
+          <div class="col-md-6">
+            <div class="contact-card-box">
+              <div>
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <div class="icon-badge" style="background: rgba(16, 185, 129, 0.12); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.25);">
+                    <i class="bi bi-whatsapp"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-light fw-bold mb-0">WhatsApp / Phone</h5>
+                    <small class="font-monospace" style="color: #34d399; font-size: 11px;">Fast Response</small>
+                  </div>
+                </div>
+                <p class="text-secondary small mb-3">Saluran tercepat untuk diskusi santai, tanya jawab seputar project, atau koordinasi teknis.</p>
+                <div class="font-monospace text-light fw-bold fs-5 mb-4">081276870144</div>
+              </div>
+              <a href="https://wa.me/6281276870144" target="_blank" class="btn btn-outline-info w-100 fw-semibold">
+                <i class="bi bi-whatsapp me-2"></i>Chat on WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Card Email -->
+          <div class="col-md-6">
+            <div class="contact-card-box">
+              <div>
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <div class="icon-badge" style="background: rgba(56, 189, 248, 0.12); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.25);">
+                    <i class="bi bi-envelope"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-light fw-bold mb-0">Email Address</h5>
+                    <small class="font-monospace text-info" style="font-size: 11px;">Direct Inbox</small>
+                  </div>
+                </div>
+                <p class="text-secondary small mb-3">Kirimkan rincian kebutuhan sistem, berkas dokumen brief, atau pesan formal langsung ke inbox saya.</p>
+                <div class="font-monospace text-light fw-bold fs-6 mb-4 text-truncate">muhammadradekaislamsyah1@gmail.com</div>
+              </div>
+              <a href="mailto:muhammadradekaislamsyah1@gmail.com" class="btn btn-outline-info w-100 fw-semibold">
+                <i class="bi bi-envelope me-2"></i>Send an Email
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Form & Social Profiles Row -->
+        <div class="row g-4 g-lg-5 align-items-start">
+          
+          <!-- Left Column: Context & Socials -->
+          <div class="col-lg-5">
+            <div class="form-wrapper h-100">
+              <h4 class="text-light fw-bold mb-3">Social &amp; Professional</h4>
+              <p class="text-secondary small mb-4" style="line-height: 1.7;">
+                Saya terbuka untuk bertukar pengalaman seputar pembuatan web, pengolahan dataset besar, maupun perakitan modul elektronika.
+              </p>
+
+              <div class="d-flex flex-wrap gap-2 mb-4">
+                <a href="#" target="_blank" class="social-pill">
+                  <i class="bi bi-github text-info"></i> GitHub
+                </a>
+                <a href="#" target="_blank" class="social-pill">
+                  <i class="bi bi-instagram text-info"></i> Instagram
+                </a>
+                <a href="#" target="_blank" class="social-pill">
+                  <i class="bi bi-tiktok text-info"></i> TikTok
+                </a>
+              </div>
+
+              <div class="p-3 rounded-3 mt-4" style="background: rgba(8, 12, 20, 0.6); border: 1px solid var(--border-subtle);">
+                <div class="small text-secondary">
+                  <i class="bi bi-info-circle text-info me-1"></i> Respon paling instan bisa didapatkan dengan menghubungi via <strong>WhatsApp</strong> di kartu atas.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Form UI -->
+          <div class="col-lg-7">
+            <div class="form-wrapper">
+              <h4 class="text-light fw-bold mb-2">Kirim Pesan</h4>
+              <p class="text-secondary small mb-4">Formulir ringkas untuk meneruskan draf pesan langsung ke aplikasi email Anda.</p>
+
+              <form id="contactFormUI" onsubmit="handleFormSubmit(event)">
+                <div class="row gy-3">
+                  <div class="col-md-6">
+                    <input type="text" id="formName" class="form-control form-control-custom" placeholder="Nama Anda" required>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="email" id="formEmail" class="form-control form-control-custom" placeholder="Email Anda" required>
+                  </div>
+                  <div class="col-12">
+                    <input type="text" id="formSubject" class="form-control form-control-custom" placeholder="Subjek / Kebutuhan Project" required>
+                  </div>
+                  <div class="col-12">
+                    <textarea id="formMessage" class="form-control form-control-custom" rows="5" placeholder="Tuliskan pesan atau gambaran alur sistem yang ingin didiskusikan..." required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <div id="formNotice" class="alert alert-info d-none small py-2 font-monospace" style="background: rgba(56, 189, 248, 0.1); border-color: rgba(56, 189, 248, 0.25); color: #38bdf8;">
+                      <i class="bi bi-arrow-repeat me-1"></i> Membuka klien email...
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 py-3 fw-semibold">
+                      Send Message <i class="bi bi-send ms-1"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Closing Banner (Split Layout) -->
+        <div class="mt-5 pt-3">
+          <div class="cta-banner-wrapper mx-auto" style="max-width: 960px;">
+            <div class="row align-items-center gy-4">
+              
+              <div class="col-lg-8 text-center text-lg-start">
+                <div class="status-pill px-3 py-1 rounded-pill mb-3">
+                  <span class="status-dot"></span>
+                  <span class="font-monospace small text-info">Direct communication</span>
+                </div>
+                <h3 class="text-light fw-bold mb-2">Have a project in mind?</h3>
+                <p class="text-secondary mb-0" style="line-height: 1.6; max-width: 580px;">
+                  Let’s turn the idea into something useful. Hubungi saya langsung untuk mulai mendiskusikan kebutuhan sistem Anda.
+                </p>
+              </div>
+
+              <div class="col-lg-4 text-center text-lg-end">
+                <a href="https://wa.me/6281276870144" target="_blank" class="btn btn-primary px-4 py-3 rounded-pill fw-semibold">
+                  Get In Touch <i class="bi bi-arrow-up-right ms-1"></i>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Muhammad Radeka Islamsyah</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="#" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+        <a href="#" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" target="_blank" title="TikTok"><i class="bi bi-tiktok"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const notice = document.getElementById('formNotice');
+      const subject = encodeURIComponent(document.getElementById('formSubject').value);
+      const name = encodeURIComponent(document.getElementById('formName').value);
+      const message = encodeURIComponent(document.getElementById('formMessage').value);
+      
+      notice.classList.remove('d-none');
+      setTimeout(() => {
+        window.location.href = `mailto:muhammadradekaislamsyah1@gmail.com?subject=${subject}&body=Halo, saya ${name}.%0D%0A%0D%0A${message}`;
+      }, 500);
+    }
+  </script>
+</body>
+</html>

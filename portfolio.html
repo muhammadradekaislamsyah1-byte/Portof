@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio - Muhammad Radeka Islamsyah</title>
+  <meta name="description" content="Koleksi proyek sistem web, database relasional, script pemrosesan data, dan hardware oleh Muhammad Radeka Islamsyah.">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Filter Bar Minimalis */
+    .filter-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 35px;
+    }
+    .filter-btn {
+      background: rgba(14, 21, 38, 0.6);
+      border: 1px solid var(--border-subtle);
+      color: var(--default-color);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .filter-btn:hover {
+      border-color: var(--border-focus);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+    .filter-btn.active {
+      background: rgba(56, 189, 248, 0.12);
+      border-color: var(--accent-color);
+      color: var(--accent-color);
+      font-weight: 600;
+      box-shadow: 0 0 16px rgba(56, 189, 248, 0.18);
+    }
+
+    /* Repo Card Murni Tanpa Foto */
+    .repo-card {
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 24px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.25s ease, box-shadow 0.25s ease !important;
+    }
+    .repo-card:hover {
+      transform: translateY(-8px) scale(1.015) !important;
+      border-color: var(--border-focus) !important;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(56, 189, 248, 0.1) !important;
+    }
+    .repo-card:active {
+      transform: scale(0.97) translateY(-2px) !important;
+      transition: transform 0.1s ease !important;
+    }
+
+    /* Icon Box Header */
+    .repo-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-color);
+      font-size: 1.25rem;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .repo-card:hover .repo-icon-box {
+      transform: translateY(-3px) scale(1.1);
+      border-color: var(--accent-color);
+      color: #fff;
+    }
+
+    .project-points {
+      list-style: none;
+      padding: 0;
+      margin: 14px 0 18px 0;
+    }
+    .project-points li {
+      font-size: 12px;
+      color: #94a3b8;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+    .project-points li i {
+      color: var(--accent-color);
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    .repo-action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--accent-color);
+      font-size: 13px;
+      font-weight: 500;
+      padding-top: 14px;
+      margin-top: auto;
+      border-top: 1px solid var(--border-subtle);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .repo-action-btn i {
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .repo-action-btn:hover {
+      color: #ffffff;
+    }
+    .repo-action-btn:hover i {
+      transform: translateX(6px);
+      color: var(--accent-color);
+    }
+
+    /* Filter Hide / Show Helper */
+    .portfolio-grid-item {
+      transition: all 0.4s ease;
+    }
+    .portfolio-grid-item.d-none-filter {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body class="portfolio-page">
+
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="#" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+        <a href="#" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" target="_blank" title="TikTok"><i class="bi bi-tiktok"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+    <section id="portfolio" class="portfolio section">
+      
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Selected Projects</h2>
+        <p>Aplikasi web, arsitektur database relasional, script pengolah data, dan eksperimen modul perangkat keras yang dibangun secara mandiri.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Filter Tab -->
+        <div class="filter-wrap">
+          <button class="filter-btn active" data-filter="all">Semua Proyek</button>
+          <button class="filter-btn" data-filter="web">Web &amp; Backend</button>
+          <button class="filter-btn" data-filter="data">Data &amp; Script</button>
+          <button class="filter-btn" data-filter="hardware">Hardware</button>
+        </div>
+
+        <!-- Grid Proyek Tanpa Foto -->
+        <div class="row g-4" id="portfolioContainer">
+
+          <!-- 01 Ridera -->
+          <div class="col-lg-4 col-md-6 portfolio-grid-item" data-category="web">
+            <div class="repo-card">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="repo-icon-box"><i class="bi bi-compass"></i></div>
+                <span class="badge bg-warning text-dark font-monospace fw-semibold" style="font-size: 10px;">MAIN PROJECT</span>
+              </div>
+              
+              <small class="text-info font-monospace mb-1">Web Platform &bull; PHP Native</small>
+              <h4 class="text-light fw-bold mb-2">Ridera</h4>
+              <p class="text-secondary small mb-1">Platform pencatat rute perjalanan motor, riwayat touring, dan kalkulasi efisiensi konsumsi bahan bakar secara akurat.</p>
+              
+              <ul class="project-points">
+                <li><i class="bi bi-check2"></i> Hitung otomatis rata-rata konsumsi bensin (KM/L).</li>
+                <li><i class="bi bi-check2"></i> Dokumentasi memori rute &amp; catatan cuaca perjalanan.</li>
+              </ul>
+
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <span class="tech-pill">PHP Native</span>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">Bootstrap 5</span>
+                <span class="tech-pill">JavaScript</span>
+              </div>
+              
+              <a href="portfolio-details.html#project-01" class="repo-action-btn">
+                <span>Lihat Spesifikasi Teknis</span> <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 02 Large Excel Management -->
+          <div class="col-lg-4 col-md-6 portfolio-grid-item" data-category="data">
+            <div class="repo-card">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="repo-icon-box"><i class="bi bi-file-earmark-spreadsheet"></i></div>
+                <span class="badge bg-success font-monospace" style="font-size: 10px;">COMPLETED</span>
+              </div>
+              
+              <small class="text-info font-monospace mb-1">Data Processing &bull; SQL</small>
+              <h4 class="text-light fw-bold mb-2">Large Excel Management</h4>
+              <p class="text-secondary small mb-1">Sistem penanganan berkas spreadsheet besar dengan indexing database agar query pencarian data tetap instan.</p>
+              
+              <ul class="project-points">
+                <li><i class="bi bi-check2"></i> Batch import cepat tanpa memicu memory limit server.</li>
+                <li><i class="bi bi-check2"></i> Sanitasi dan pembersihan inkonsistensi teks otomatis.</li>
+              </ul>
+
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">PHP</span>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">Excel</span>
+              </div>
+              
+              <a href="portfolio-details.html#project-02" class="repo-action-btn">
+                <span>Lihat Spesifikasi Teknis</span> <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 03 LibreTrack -->
+          <div class="col-lg-4 col-md-6 portfolio-grid-item" data-category="web">
+            <div class="repo-card">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="repo-icon-box"><i class="bi bi-book"></i></div>
+                <span class="badge bg-success font-monospace" style="font-size: 10px;">COMPLETED</span>
+              </div>
+              
+              <small class="text-info font-monospace mb-1">Management System &bull; RDBMS</small>
+              <h4 class="text-light fw-bold mb-2">LibreTrack</h4>
+              <p class="text-secondary small mb-1">Sistem informasi perpustakaan multi-role (Admin, Petugas, Siswa) dengan pencatatan sirkulasi buku dan denda otomatis.</p>
+              
+              <ul class="project-points">
+                <li><i class="bi bi-check2"></i> Kalkulasi denda keterlambatan buku otomatis.</li>
+                <li><i class="bi bi-check2"></i> Relasi multi-tabel terstruktur &amp; hak akses session.</li>
+              </ul>
+
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <span class="tech-pill">PHP</span>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">Session Guard</span>
+              </div>
+              
+              <a href="portfolio-details.html#project-03" class="repo-action-btn">
+                <span>Lihat Spesifikasi Teknis</span> <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 04 Sistem Pengaduan Siswa -->
+          <div class="col-lg-4 col-md-6 portfolio-grid-item" data-category="web">
+            <div class="repo-card">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="repo-icon-box"><i class="bi bi-chat-square-dots"></i></div>
+                <span class="badge bg-success font-monospace" style="font-size: 10px;">COMPLETED</span>
+              </div>
+              
+              <small class="text-info font-monospace mb-1">Ticketing Workflow &bull; CRUD</small>
+              <h4 class="text-light fw-bold mb-2">Sistem Pengaduan Siswa</h4>
+              <p class="text-secondary small mb-1">Portal pelaporan sarana sekolah dengan alur pemantauan status pengerjaan yang transparan dan aman.</p>
+              
+              <ul class="project-points">
+                <li><i class="bi bi-check2"></i> Alur status: Menunggu &rarr; Diproses &rarr; Selesai.</li>
+                <li><i class="bi bi-check2"></i> Sanitasi input form terhadap celah injection &amp; XSS.</li>
+              </ul>
+
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <span class="tech-pill">PHP</span>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">Bootstrap 5</span>
+              </div>
+              
+              <a href="portfolio-details.html#project-04" class="repo-action-btn">
+                <span>Lihat Spesifikasi Teknis</span> <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 05 Presensi Mandiri PKL -->
+          <div class="col-lg-4 col-md-6 portfolio-grid-item" data-category="web">
+            <div class="repo-card">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="repo-icon-box"><i class="bi bi-clock-history"></i></div>
+                <span class="badge bg-success font-monospace" style="font-size: 10px;">COMPLETED</span>
+              </div>
+              
+              <small class="text-info font-monospace mb-1">Attendance System &bull; Logic</small>
+              <h4 class="text-light fw-bold mb-2">Presensi Mandiri PKL</h4>
+              <p class="text-secondary small mb-1">Aplikasi absensi mandiri dengan validasi batasan jendela waktu server untuk mencegah kecurangan absensi.</p>
+              
+              <ul class="project-points">
+                <li><i class="bi bi-check2"></i> Window batasan jam server (anti manipulasi waktu).</li>
+                <li><i class="bi bi-check2"></i> Upload file bukti izin &amp; rekap bulanan otomatis.</li>
+              </ul>
+
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <span class="tech-pill">PHP</span>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">Time-Lock Logic</span>
+              </div>
+              
+              <a href="portfolio-details.html#project-05" class="repo-action-btn">
+                <span>Lihat Spesifikasi Teknis</span> <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 06 USB Step-Up Converter -->
+          <div class="col-lg-4 col-md-6 portfolio-grid-item" data-category="hardware">
+            <div class="repo-card" style="border-color: rgba(245, 158, 11, 0.25);">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="repo-icon-box" style="background: rgba(245, 158, 11, 0.08); border-color: rgba(245, 158, 11, 0.2); color: #f59e0b;">
+                  <i class="bi bi-cpu"></i>
+                </div>
+                <span class="badge font-monospace" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); font-size: 10px;">HARDWARE</span>
+              </div>
+              
+              <small class="text-warning font-monospace mb-1">Electronics &bull; Power Supply</small>
+              <h4 class="text-light fw-bold mb-2">USB Step-Up Converter</h4>
+              <p class="text-secondary small mb-1">Modul konversi tegangan DC-DC USB 5V ke keluaran stabil 9V/12V untuk kebutuhan daya cadangan perangkat router.</p>
+              
+              <ul class="project-points">
+                <li><i class="bi bi-check2" style="color:#fbbf24;"></i> Suplai darurat router Wi-Fi dari powerbank.</li>
+                <li><i class="bi bi-check2" style="color:#fbbf24;"></i> Perakitan sirkuit &amp; pengujian beban multimeter.</li>
+              </ul>
+
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                <span class="tech-pill" style="color: #fbbf24; border-color: rgba(245, 158, 11, 0.3); background: rgba(245, 158, 11, 0.08);">Hardware</span>
+                <span class="tech-pill" style="color: #fbbf24; border-color: rgba(245, 158, 11, 0.3); background: rgba(245, 158, 11, 0.08);">DC-DC Converter</span>
+              </div>
+              
+              <a href="portfolio-details.html#project-06" class="repo-action-btn" style="color: #fbbf24;">
+                <span>Lihat Spesifikasi Teknis</span> <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Closing Banner -->
+      <div class="container mt-5 pt-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="cta-banner-wrapper mx-auto" style="max-width: 960px;">
+          <div class="row align-items-center gy-4">
+            <div class="col-lg-8 text-center text-lg-start">
+              <div class="status-pill px-3 py-1 rounded-pill mb-3">
+                <span class="status-dot"></span>
+                <span class="font-monospace small text-info">Ready to collaborate</span>
+              </div>
+              <h3 class="text-light fw-bold mb-2">Punya ide atau butuh sistem web?</h3>
+              <p class="text-secondary mb-0" style="line-height: 1.6; max-width: 580px;">
+                Saya siap membantu membangun website fungsional, struktur database terorganisir, atau script pengolah data sesuai kebutuhan Anda.
+              </p>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+              <a href="contact.html" class="btn btn-primary px-4 py-3 rounded-pill fw-semibold">
+                Mulai Diskusi &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Muhammad Radeka Islamsyah</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="#" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+        <a href="#" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" target="_blank" title="TikTok"><i class="bi bi-tiktok"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Script Filter Instan -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const items = document.querySelectorAll(".portfolio-grid-item");
+
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          filterBtns.forEach(b => b.classList.remove("active"));
+          this.classList.add("active");
+
+          const filterVal = this.getAttribute("data-filter");
+
+          items.forEach(function (item) {
+            if (filterVal === "all" || item.getAttribute("data-category") === filterVal) {
+              item.classList.remove("d-none-filter");
+            } else {
+              item.classList.add("d-none-filter");
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

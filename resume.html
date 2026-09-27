@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Resume - Muhammad Radeka Islamsyah</title>
+  <meta name="description" content="Riwayat pendidikan, keahlian teknis web development, dan pengalaman industri Muhammad Radeka Islamsyah.">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Styling Ringkas & Padat (Anti-Molor ke Bawah) */
+    .compact-edu-item {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 16px;
+      border-left: 2px solid rgba(56, 189, 248, 0.25);
+    }
+    .compact-edu-item::before {
+      content: "";
+      position: absolute;
+      left: -6px;
+      top: 4px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent-color);
+    }
+    .compact-edu-item h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--heading-color);
+      margin-bottom: 2px;
+    }
+    .compact-edu-item p {
+      font-size: 0.82rem;
+      color: var(--default-color);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Compact Skill Item */
+    .compact-skill {
+      background: rgba(17, 26, 46, 0.6);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 10px;
+      transition: border-color 0.2s ease;
+    }
+    .compact-skill:hover {
+      border-color: var(--border-focus);
+    }
+    .compact-skill-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    .compact-skill-title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--heading-color);
+    }
+    .compact-skill-pct {
+      font-family: var(--mono-font);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent-color);
+    }
+    .compact-progress {
+      height: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 6px;
+    }
+    .compact-progress-bar {
+      height: 100%;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #0284c7, #38bdf8);
+    }
+    .compact-progress-bar.learning {
+      background: linear-gradient(90deg, #d97706, #f59e0b);
+    }
+    .compact-skill-desc {
+      font-size: 11px;
+      color: var(--muted-color);
+      line-height: 1.4;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body class="resume-page">
+
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <h1 class="sitename">&lt;Radeka/&gt;</h1> 
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html" class="active">Resume</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <div class="header-social-links">
+        <a href="#" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+        <a href="#" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" target="_blank" title="TikTok"><i class="bi bi-tiktok"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section id="resume" class="resume section">
+      <div class="container section-title pb-4" data-aos="fade-up">
+        <h2>Resume</h2>
+        <p>Riwayat pendidikan formal, tingkat kemahiran teknis, dan pengalaman implementasi proyek nyata.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          
+          <!-- LEFT COLUMN: Education & Compact Skills -->
+          <div class="col-lg-6">
+            
+            <!-- PENDIDIKAN (COMPACT) -->
+            <div class="mb-4" data-aos="fade-up">
+              <h3 class="resume-title mb-3">Pendidikan</h3>
+              <div class="ps-1">
+                <div class="compact-edu-item">
+                  <h4>SMK Negeri 1 Bintan Utara</h4>
+                  <p class="text-info font-monospace small">Rekayasa Perangkat Lunak (RPL)</p>
+                  <p>Fokus pada Web Development, Database, Software Development, dan System Logic.</p>
+                </div>
+                <div class="compact-edu-item">
+                  <h4>SMP Negeri 16 SKL</h4>
+                  <p>Pendidikan Menengah Pertama</p>
+                </div>
+                <div class="compact-edu-item mb-0">
+                  <h4>SD Negeri 005 SKL</h4>
+                  <p>Pendidikan Dasar</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- KEMAMPUAN TEKNIS (COMPACT PROFICIENCY BARS) -->
+            <div data-aos="fade-up">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h3 class="resume-title m-0 p-0 border-0">Kemampuan Teknis</h3>
+                <span class="badge bg-dark border border-secondary text-secondary font-monospace" style="font-size: 10px;">Junior / Entry-Level</span>
+              </div>
+
+              <!-- 1. Backend & Application Logic -->
+              <div class="compact-skill">
+                <div class="compact-skill-header">
+                  <span class="compact-skill-title">Backend &amp; Application Logic</span>
+                  <span class="compact-skill-pct">85% &bull; Mahir (Core)</span>
+                </div>
+                <div class="compact-progress">
+                  <div class="compact-progress-bar" style="width: 85%;"></div>
+                </div>
+                <p class="compact-skill-desc">Native PHP, Procedural, CRUD, Server Logic, Auth &amp; Session, Form Validation, Business Logic, Modular/MVC.</p>
+              </div>
+
+              <!-- 2. Database & SQL -->
+              <div class="compact-skill">
+                <div class="compact-skill-header">
+                  <span class="compact-skill-title">Database &amp; SQL</span>
+                  <span class="compact-skill-pct">80% &bull; Mahir (Core)</span>
+                </div>
+                <div class="compact-progress">
+                  <div class="compact-progress-bar" style="width: 80%;"></div>
+                </div>
+                <p class="compact-skill-desc">MySQL, Relational Design, JOIN, WHERE, ORDER BY, GROUP BY, Filtering, Searching, Basic Optimization.</p>
+              </div>
+
+              <!-- 3. Data Processing -->
+              <div class="compact-skill">
+                <div class="compact-skill-header">
+                  <span class="compact-skill-title">Data Processing</span>
+                  <span class="compact-skill-pct">78% &bull; Mahir (Core)</span>
+                </div>
+                <div class="compact-progress">
+                  <div class="compact-progress-bar" style="width: 78%;"></div>
+                </div>
+                <p class="compact-skill-desc">Validation, Transformation, Dashboard Table Management, Excel/Spreadsheet Processing, Reporting &amp; Export.</p>
+              </div>
+
+              <!-- 4. Frontend & UI -->
+              <div class="compact-skill">
+                <div class="compact-skill-header">
+                  <span class="compact-skill-title">Frontend &amp; UI</span>
+                  <span class="compact-skill-pct">75% &bull; Menengah</span>
+                </div>
+                <div class="compact-progress">
+                  <div class="compact-progress-bar" style="width: 75%;"></div>
+                </div>
+                <p class="compact-skill-desc">HTML5, CSS3, Responsive Design, Tailwind CSS, Basic JavaScript, Component Layout, UX Awareness.</p>
+              </div>
+
+              <!-- 5. Scripting & Troubleshooting -->
+              <div class="compact-skill">
+                <div class="compact-skill-header">
+                  <span class="compact-skill-title">Scripting &amp; Troubleshooting</span>
+                  <span class="compact-skill-pct">72% &bull; Menengah</span>
+                </div>
+                <div class="compact-progress">
+                  <div class="compact-progress-bar" style="width: 72%;"></div>
+                </div>
+                <p class="compact-skill-desc">PHP &amp; SQL Scripting, Basic Python, CLI/Terminal, Debugging, Code Fixing &amp; Improvement.</p>
+              </div>
+
+              <!-- 6. Tools & Environment -->
+              <div class="compact-skill">
+                <div class="compact-skill-header">
+                  <span class="compact-skill-title">Tools &amp; Development Environment</span>
+                  <span class="compact-skill-pct">80% &bull; Praktis</span>
+                </div>
+                <div class="compact-progress">
+                  <div class="compact-progress-bar" style="width: 80%;"></div>
+                </div>
+                <p class="compact-skill-desc">VS Code, XAMPP, Laragon, phpMyAdmin, Git, GitHub, Chrome DevTools, Canva.</p>
+              </div>
+
+              <!-- 7. Currently Learning -->
+              <div class="compact-skill" style="border-color: rgba(245, 158, 11, 0.25);">
+                <div class="compact-skill-header">
+                  <span class="compact-skill-title">Currently Learning / Basic Knowledge</span>
+                  <span class="compact-skill-pct" style="color: #f59e0b;">40% &bull; Belajar</span>
+                </div>
+                <div class="compact-progress">
+                  <div class="compact-progress-bar learning" style="width: 40%;"></div>
+                </div>
+                <p class="compact-skill-desc">Laravel, REST API, Node.js, React.js, Web Hosting &amp; Deployment, Apache, .htaccess.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT COLUMN: Experience Section (Preserved) -->
+          <div class="col-lg-6">
+            <div class="resume-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="resume-title mb-3">Pengalaman Kerja &amp; Praktik</h3>
+              <div class="resume-content">
+                
+                <article class="experience-item">
+                  <h4>Praktik Kerja Lapangan (PKL)</h4>
+                  <h5>Pengalaman Industri</h5>
+                  <p class="company"><em>PT Pepperl+Fuchs Bintan &bull; Bintan Industrial Estate, Lobam</em>[cite: 13]</p>
+                  <ul>
+                    <li>Mengikuti dan beradaptasi langsung dengan lingkungan kerja industri serta standar operasional profesional[cite: 13].</li>
+                    <li>Mempelajari kedisiplinan, tanggung jawab, dan ketelitian tinggi dalam penyelesaian tugas teknis[cite: 13].</li>
+                    <li>Memahami alur workflow kerja terstruktur dan penerapan metode problem solving dalam tim[cite: 13].</li>
+                  </ul>
+                </article>
+
+                <article class="experience-item">
+                  <h4>Former TikTok Content Creator</h4>
+                  <h5>Kreativitas &amp; Analisis Tren</h5>
+                  <p class="company"><em>Niche: Meme, Gadget, &amp; Teknologi</em>[cite: 13]</p>
+                  <ul>
+                    <li>Mengembangkan ide konten kreatif, visual editing, dan konsistensi produksi konten seputar tren gadget dan teknologi[cite: 13].</li>
+                    <li>Menganalisis audiens untuk menyampaikan topik teknologi dengan cara yang santai dan mudah dipahami[cite: 13].</li>
+                  </ul>
+                </article>
+
+                <article class="experience-item">
+                  <h4>Pengembangan Proyek Portofolio Utama</h4>
+                  <h5>Independent Software Projects</h5>
+                  <p class="company"><em>Ridera, Evalix, LibreTrack, Sistem Presensi PKL, USB Step-Up</em>[cite: 13]</p>
+                  <ul>
+                    <li><strong>Ridera:</strong> Merancang platform route memory dan pelacak konsumsi bensin (KM/L) menggunakan PHP Native[cite: 13].</li>
+                    <li><strong>Large Excel Management:</strong> Membangun sistem pemrosesan dan optimasi dataset besar untuk pencarian cepat[cite: 13].</li>
+                    <li><strong>LibreTrack &amp; Sistem Pengaduan:</strong> Membangun sistem multi-role dengan validasi status alur data[cite: 13].</li>
+                    <li><strong>USB Step-Up Converter:</strong> Menyelesaikan perakitan hardware untuk konversi dan pengujian tegangan listrik USB[cite: 13].</li>
+                  </ul>
+                </article>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Muhammad Radeka Islamsyah</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="#" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+        <a href="#" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" target="_blank" title="TikTok"><i class="bi bi-tiktok"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

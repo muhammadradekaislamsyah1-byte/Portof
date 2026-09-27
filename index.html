@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Muhammad Radeka Islamsyah - Developer, Tech Enthusiast &amp; Creator</title>
+  <meta name="description" content="Personal portfolio Muhammad Radeka Islamsyah. Web systems, database, data processing, and hardware.">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Custom Page Styling -->
+  <style>
+    /* Tech Tag Pill */
+    .tech-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      padding: 5px 12px;
+      border-radius: 6px;
+      background: rgba(0, 210, 255, 0.08);
+      color: #00d2ff;
+      border: 1px solid rgba(0, 210, 255, 0.2);
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    /* What I Do Card */
+    .wid-card {
+      background: #111c38;
+      border: 1px solid rgba(0, 210, 255, 0.12);
+      border-radius: 12px;
+      padding: 24px;
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+    .wid-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0, 210, 255, 0.4);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 210, 255, 0.1);
+    }
+    .wid-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(0, 210, 255, 0.1);
+      border: 1px solid rgba(0, 210, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #00d2ff;
+      font-size: 1.25rem;
+      margin-bottom: 16px;
+    }
+
+    /* Featured Project Card */
+    .featured-card {
+      background: #111c38;
+      border: 1px solid rgba(0, 210, 255, 0.25);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .featured-card:hover {
+      border-color: #00d2ff;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 210, 255, 0.15);
+    }
+    .featured-img-slot {
+      width: 100%;
+      height: 100%;
+      min-height: 250px;
+      background: #0a0f1d;
+      border-bottom: 1px solid rgba(0, 210, 255, 0.15);
+      overflow: hidden;
+      display: flex;
+    }
+    .featured-img-slot img {
+      width: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .featured-card:hover .featured-img-slot img {
+      transform: scale(1.03);
+    }
+    
+    @media (min-width: 992px) {
+      .featured-img-slot {
+        border-bottom: none;
+        border-right: 1px solid rgba(0, 210, 255, 0.15);
+        height: 100%;
+      }
+    }
+
+    /* Beyond Code Interest Pill */
+    .interest-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 50px;
+      background: #111c38;
+      border: 1px solid rgba(0, 210, 255, 0.15);
+      color: #e2e8f0;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+    .interest-tag i {
+      color: #00d2ff;
+    }
+    .interest-tag:hover {
+      border-color: #00d2ff;
+      background: rgba(0, 210, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* How I Learn & Build Step Card */
+    .step-box {
+      background: #111c38;
+      border: 1px solid rgba(0, 210, 255, 0.12);
+      border-radius: 12px;
+      padding: 22px 18px;
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+    .step-box:hover {
+      border-color: rgba(0, 210, 255, 0.4);
+      transform: translateY(-3px);
+    }
+
+    /* Modern Final CTA (Split Layout) */
+    .cta-banner-wrapper {
+      background: #111c38;
+      border: 1px solid rgba(0, 210, 255, 0.2);
+      border-radius: 14px;
+      padding: 32px 36px;
+      transition: all 0.3s ease;
+    }
+    .cta-banner-wrapper:hover {
+      border-color: rgba(0, 210, 255, 0.45);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 210, 255, 0.08);
+    }
+    .status-pill {
+      background: rgba(0, 210, 255, 0.08);
+      border: 1px solid rgba(0, 210, 255, 0.2);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 8px #10b981;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <h1 class="sitename">&lt;Radeka/&gt;</h1> 
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <!-- Header Social Links (GitHub, Instagram, TikTok) -->
+      <div class="header-social-links">
+        <a href="https://github.com/muhammadradekaislamsyah1-byte" target="_blank" class="github" title="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://www.instagram.com/raddxvz?stkn=MXNpZ2pmYzB1Z2duOQ==" target="_blank" class="instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.tiktok.com/@revzrch?_r=1&_t=ZS-99uZyWONpb8" target="_blank" class="tiktok" title="TikTok"><i class="bi bi-tiktok"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- 1. HERO SECTION -->
+    <section id="hero" class="hero section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-5 align-items-center">
+          
+          <div class="col-lg-6 order-2 order-lg-1">
+            <div class="hero-content text-center text-lg-start">
+              <h1 data-aos="fade-up" data-aos-delay="200">Hi, I’m <span class="highlight">Radeka.</span></h1>
+              <h2 data-aos="fade-up" data-aos-delay="300" class="text-light fw-semibold fs-4 mb-3">Developer, Tech Enthusiast &amp; Creator.</h2>
+              <p data-aos="fade-up" data-aos-delay="400" class="text-secondary fs-5 mb-4 mx-auto mx-lg-0" style="max-width: 520px; line-height: 1.7;">
+                I build web systems, explore technology, and turn ideas into useful projects.
+              </p>
+              <div class="hero-actions justify-content-center justify-content-lg-start" data-aos="fade-up" data-aos-delay="500">
+                <a href="portfolio.html" class="btn btn-primary px-4 py-2 rounded-pill fw-semibold">View My Projects</a>
+                <a href="contact.html" class="btn btn-outline px-4 py-2 rounded-pill fw-semibold">Get In Touch</a>
+              </div>
+              
+              <!-- Hero Social Links (GitHub, Instagram, TikTok) -->
+              <div class="social-links mt-4 justify-content-center justify-content-lg-start" data-aos="fade-up" data-aos-delay="600">
+                <a href="https://github.com/muhammadradekaislamsyah1-byte" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+                <a href="https://www.instagram.com/raddxvz?stkn=MXNpZ2pmYzB1Z2duOQ==" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.tiktok.com/@revzrch?_r=1&_t=ZS-99uZyWONpb8" target="_blank" title="TikTok"><i class="bi bi-tiktok"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Image & Floating Cards -->
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="300">
+            <div class="hero-image">
+              <div class="image-wrapper">
+                <img src="assets/img/profile/profile-square-11.webp" alt="Muhammad Radeka Islamsyah" class="img-fluid">
+                
+                <div class="floating-elements">
+                  <div class="floating-card design" data-aos="fade-left" data-aos-delay="700">
+                    <i class="bi bi-code-slash"></i>
+                    <span>PHP &amp; Logic</span>
+                  </div>
+                  <div class="floating-card code" data-aos="fade-right" data-aos-delay="800">
+                    <i class="bi bi-database-check"></i>
+                    <span>MySQL DB</span>
+                  </div>
+                  <div class="floating-card creativity" data-aos="fade-up" data-aos-delay="900">
+                    <i class="bi bi-cpu"></i>
+                    <span>Tech &amp; Hardware</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. SHORT INTRO -->
+    <section id="short-intro" class="section py-5" style="border-top: 1px solid rgba(0, 210, 255, 0.08); border-bottom: 1px solid rgba(0, 210, 255, 0.08); background: rgba(17, 28, 56, 0.3);">
+      <div class="container" data-aos="fade-up">
+        <div class="row align-items-center gy-4 text-center text-lg-start">
+          <div class="col-lg-7">
+            <h3 class="text-light fw-bold mb-2">I Like Building Things.</h3>
+            <p class="text-secondary mb-0 mx-auto mx-lg-0" style="max-width: 600px; line-height: 1.7;">
+              From web applications and databases to automation, APIs, hardware experiments, and creative projects, I enjoy learning by building and improving things through real projects.
+            </p>
+          </div>
+          <div class="col-lg-5 text-lg-end">
+            <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-end">
+              <span class="tech-badge">PHP</span>
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">MySQL</span>
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">Laravel</span>
+              <span class="tech-badge">REST API</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. WHAT I DO -->
+    <section id="what-i-do" class="section">
+      <div class="container section-title pb-4" data-aos="fade-up">
+        <h2>What I Do</h2>
+        <p>Bidang pengembangan perangkat lunak dan teknologi yang aktif saya pelajari serta implementasikan.</p>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4 mb-5">
+          
+          <div class="col-lg-3 col-md-6">
+            <div class="wid-card">
+              <div class="wid-icon"><i class="bi bi-browser-chrome"></i></div>
+              <h5 class="text-light fw-bold mb-2">Web Development</h5>
+              <p class="small text-secondary mb-0" style="line-height: 1.6;">
+                Building websites and web-based systems using PHP, HTML, CSS, JavaScript, and MySQL.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="wid-card">
+              <div class="wid-icon"><i class="bi bi-terminal-split"></i></div>
+              <h5 class="text-light fw-bold mb-2">Backend &amp; Database</h5>
+              <p class="small text-secondary mb-0" style="line-height: 1.6;">
+                Developing system logic, CRUD functionality, authentication, database structures, and SQL queries.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="wid-card">
+              <div class="wid-icon"><i class="bi bi-file-earmark-spreadsheet"></i></div>
+              <h5 class="text-light fw-bold mb-2">Data &amp; Automation</h5>
+              <p class="small text-secondary mb-0" style="line-height: 1.6;">
+                Processing large datasets, working with Excel, and creating automation using Python.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="wid-card">
+              <div class="wid-icon"><i class="bi bi-cpu"></i></div>
+              <h5 class="text-light fw-bold mb-2">Technology &amp; Hardware</h5>
+              <p class="small text-secondary mb-0" style="line-height: 1.6;">
+                Exploring electronics, hardware, audio, motorcycles, and other technology-related projects.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center pt-2">
+          <a href="services.html" class="btn btn-outline-info rounded-pill px-4 py-2 fw-semibold">
+            Explore My Services &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FEATURED PROJECT (RIDERA) -->
+    <section id="featured-project" class="section pt-0">
+      <div class="container section-title pb-4" data-aos="fade-up">
+        <h2>Featured Project</h2>
+        <p>Proyek utama yang saat ini sedang aktif saya kembangkan dan sempurnakan.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="featured-card">
+              <div class="row g-0">
+                
+                <div class="col-lg-6">
+                  <div class="featured-img-slot">
+                    <img src="assets/img/portfolio/portfolio-1.webp" alt="Ridera Preview" class="img-fluid">
+                  </div>
+                </div>
+
+                <div class="col-lg-6 p-4 p-lg-5 d-flex flex-column justify-content-center">
+                  <div class="d-flex align-items-center gap-2 mb-3">
+                    <span class="badge bg-info text-dark fw-bold px-2 py-1"><i class="bi bi-star-fill me-1"></i> Main Project</span>
+                    <span class="badge bg-warning text-dark font-monospace" style="font-size: 11px;">Active Development</span>
+                  </div>
+                  <h3 class="text-light fw-bold mb-2">Ridera</h3>
+                  <p class="text-secondary mb-4" style="line-height: 1.7;">
+                    A motorcycle journey platform focused on recording trips, routes, fuel data, and memorable moments from every journey.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2 mb-4">
+                    <span class="tech-badge">PHP</span>
+                    <span class="tech-badge">MySQL</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">HTML</span>
+                    <span class="tech-badge">CSS</span>
+                  </div>
+                  <div>
+                    <a href="portfolio-details.html" class="btn btn-primary px-4 py-2 rounded-pill fw-semibold">
+                      View Project &rarr;
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. BEYOND CODE -->
+    <section id="beyond-code" class="section pt-0">
+      <div class="container section-title pb-3" data-aos="fade-up">
+        <h2>Beyond Code</h2>
+        <p>Technology is more than just programming for me. I’m also interested in motorcycles, gadgets and hardware, audio and IEMs, astrophotography, electronics, and content creation.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="d-flex flex-wrap gap-2 justify-content-center">
+          <div class="interest-tag"><i class="bi bi-code-slash"></i> Programming</div>
+          <div class="interest-tag"><i class="bi bi-phone"></i> Technology &amp; Gadgets</div>
+          <div class="interest-tag"><i class="bi bi-bicycle"></i> Motorcycles</div>
+          <div class="interest-tag"><i class="bi bi-headphones"></i> Audiophile / Audio</div>
+          <div class="interest-tag"><i class="bi bi-moon-stars"></i> Astrophotography</div>
+          <div class="interest-tag"><i class="bi bi-cpu"></i> Electronics</div>
+          <div class="interest-tag"><i class="bi bi-camera-video"></i> Content Creation</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. PERSONAL APPROACH -->
+    <section id="how-i-work" class="section pt-0">
+      <div class="container section-title pb-4" data-aos="fade-up">
+        <h2>How I Learn &amp; Build</h2>
+        <p class="mb-0">Pendekatan bertahap yang saya terapkan saat menyelesaikan tugas maupun merancang sistem baru.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4 mb-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="step-box">
+              <span class="badge text-bg-primary font-monospace mb-3">01</span>
+              <h5 class="text-light fw-bold mb-2">Understand</h5>
+              <p class="small text-secondary mb-0">Understand the problem and what needs to be built.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="step-box">
+              <span class="badge text-bg-primary font-monospace mb-3">02</span>
+              <h5 class="text-light fw-bold mb-2">Build</h5>
+              <p class="small text-secondary mb-0">Turn the idea into a working system or prototype.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="step-box">
+              <span class="badge text-bg-primary font-monospace mb-3">03</span>
+              <h5 class="text-light fw-bold mb-2">Test</h5>
+              <p class="small text-secondary mb-0">Find problems, bugs, and things that can be improved.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="step-box">
+              <span class="badge text-bg-primary font-monospace mb-3">04</span>
+              <h5 class="text-light fw-bold mb-2">Improve</h5>
+              <p class="small text-secondary mb-0">Refactor, optimize, and improve the result.</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center pt-2">
+          <p class="small text-secondary font-monospace mb-0" style="color: #64748b !important;">
+            <i class="bi bi-quote me-1"></i>I believe the best way to learn technology is to actually build something with it.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FINAL CTA -->
+    <section id="final-cta" class="section pt-0 pb-5">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="cta-banner-wrapper mx-auto" style="max-width: 960px;">
+          <div class="row align-items-center gy-4">
+            
+            <div class="col-lg-8 text-center text-lg-start">
+              <div class="status-pill px-3 py-1 rounded-pill mb-3">
+                <span class="status-dot"></span>
+                <span class="font-monospace small text-info">Open for discussion</span>
+              </div>
+              <h3 class="text-light fw-bold mb-2">Have an idea in mind?</h3>
+              <p class="text-secondary mb-0" style="line-height: 1.6; max-width: 580px;">
+                Whether it’s a website, system, automation project, or simply an interesting technology idea, feel free to reach out.
+              </p>
+            </div>
+
+            <div class="col-lg-4 text-center text-lg-end">
+              <a href="contact.html" class="btn btn-primary px-4 py-3 rounded-pill fw-semibold">
+                Let’s Talk &rarr;
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Muhammad Radeka Islamsyah</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <!-- Footer Social Links (GitHub, Instagram, TikTok) -->
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/muhammadradekaislamsyah1-byte" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://www.instagram.com/raddxvz?stkn=MXNpZ2pmYzB1Z2duOQ==" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.tiktok.com/@revzrch?_r=1&_t=ZS-99uZyWONpb8" target="_blank" title="TikTok"><i class="bi bi-tiktok"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
